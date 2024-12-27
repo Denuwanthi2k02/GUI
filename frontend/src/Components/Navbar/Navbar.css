@@ -1,0 +1,125 @@
+:root{
+    --primarycolor: orange;  /* A shade of blue */
+    --Hovercolor:#ff7700; /* A shade of green */
+    --blackcolor: #090400fc; /* Light gray */
+    --textcolor:gray; /* Dark gray */
+    --inputcolor:white;
+    --greytext:rgba(96, 76, 76, 0.697);
+    --greyBg:rgb(192, 192, 192);
+    --whitecolorDeam:white;
+    --whitecolor:white;
+  }
+
+  .navBarSection{
+    .header{
+        position: fixed;
+        display:flex ;
+        align-items: center;
+        justify-content: space-between;
+        background: transparent;
+        width: 100%;
+        padding: 1rem;
+        z-index: 1000;
+    }
+
+    .logoDiv{
+        .logo{
+            color: var(--whitecolor);
+            font-weight: 500;
+            cursor: pointer;
+            align-items: center;
+
+            .icon{
+                color: var(--primarycolor);
+                font-size: 25px;
+            }
+
+        }
+    }
+
+    @media screen and (max-width : 768px) {
+        .navBar{
+            background: var(--greyBg);
+            position: absolute;
+            height: max-content;
+            padding: 1rem;
+            width: 100%;
+            top: 0;
+            left: -500%;
+            box-shadow: 0 2px 4px rgba(209,209,209,0.904);
+            transition: .5 ease;
+            z-index: 1000;
+
+            .navLists{
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                margin: auto;
+
+
+                .navItem{
+                    padding: 1rem 0;/* on the wide screen padding should be: 0 1rem */
+
+                    .navLink{
+                        color: var(--textcolor);
+                        font-size: .9rem;
+                        font-weight: 600;
+                        &:hover{
+                            color: var(--primarycolor);
+                        }
+                    }
+                }
+
+                .headerBtns{
+                    flex-direction: column;
+                    .btn{
+                        margin-top: 1rem;  /* on the wide screen margin left should be 1rem */
+
+                        a{
+                            font-weight: 600;
+                            
+                            &:hover{
+                                color: var(--whitecolor);
+
+                            }
+            
+                        }
+                    }
+
+                    .loginBtn{
+                        background: none;
+                        border: 1px solid var(--primarycolor);
+
+                        a{
+                            color:var(--primarycolor)
+                        }
+
+                        &:hover{
+                            background: var(--Hovercolor);
+
+                            a{
+                                color: var(--whitecolor);
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .closeNavBar{
+                position: absolute;
+                top: 1rem;
+                right: 1.5rem;
+                color: var(--primarycolor);
+                &:hover .icon{
+                    color: var(--Hovercolor);
+                }
+            }
+
+        }
+
+        .activeNavBar{
+            left: 0;
+        }
+    }
+  }
