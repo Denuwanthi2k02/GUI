@@ -122,4 +122,14 @@
             left: 0;
         }
     }
+
+    .toggleNavBar{
+        .icon{
+            font-size: 25px;
+            color: var(--whitecolor);
+            &:hover{
+                color: var(--primarycolor);
+            }
+        }
+    }
   }

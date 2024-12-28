@@ -7,13 +7,10 @@ import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar/>
-      {/* <Home/>
-      <Movie/>
-      <Footer/> */}
-     
-    </div>
+      <Home/>
+    </>
   );
 }
 
