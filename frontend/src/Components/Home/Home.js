@@ -25,6 +25,29 @@ return(
                 </button>
             </div>
 
+            <div className="movieCard grid">
+                
+                <div className="movieName">
+                    <label htmlFor="movie">Movie</label>
+                    <input type="text" placeholder="Avatar"/>
+                </div>
+                
+
+                <div className="language">
+                    <label htmlFor="language">Language</label>
+                    <input type="text" placeholder="English"/>
+                </div>
+
+                <div className="date">
+                    <label htmlFor="date">Date</label>
+                    <input type="text" placeholder="Dec 25, 2024"/>
+                </div>
+
+                <div className="btn">
+                    Search
+                </div>
+            </div>
+
             
         
         </div>
