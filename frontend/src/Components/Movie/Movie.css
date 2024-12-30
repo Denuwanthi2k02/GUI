@@ -1,0 +1,65 @@
+:root{
+    --primarycolor: orange;  /* A shade of blue */
+    --Hovercolor:#ff7700; /* A shade of green */
+    --blackcolor: #090400fc; /* Light gray */
+    --textcolor:gray; /* Dark gray */
+    --inputcolor:rgb(224, 220, 220);
+    --greytext:rgba(96, 76, 76, 0.697);
+    --greyBg:rgb(192, 192, 192);
+    --whitecolorDeam:white;
+    --whitecolor:white;
+  }
+
+  .Popular{
+    padding-top: 15rem;
+
+    .secContainer{
+        .secHeader{
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+
+            .textDiv{
+                .secTitle{
+                    color: var(--blackcolor);
+                    line-height: 1.5rem;
+                    padding-bottom: .5rem;
+                }
+
+                p{
+                    font-size: 13px;
+                    color: var(--textcolor);
+                    font-weight: 500;
+                }
+            }
+
+            .iconsDiv{
+                gap: .5rem;
+
+                .icon{
+                    padding: .5rem;
+                    background: var(--greytext);
+                    border-radius: 50%;
+                    font-size: 2.5rem;
+
+                    &:hover{
+                        background: var(--blackcolor);
+                        color: var(--whitecolor);
+                    }
+                }
+
+                .LeftIcon{
+                    background: var(--blackcolor);
+                    color: var(--whitecolor);
+
+                    &:hover{
+                        background: var(--greytext);
+                        color: var(--blackcolor);
+                    }
+                }
+
+            }
+        }
+    }
+
+  }
