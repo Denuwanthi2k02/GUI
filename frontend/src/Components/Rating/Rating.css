@@ -1,0 +1,27 @@
+.rating {
+    display: flex;
+    gap: 1px; /* Space between stars */
+    align-items: left;
+    justify-content: left;
+    margin: 20px;
+  }
+  
+  .rating.vertical {
+    flex-direction: column; /* Stack stars vertically */
+  }
+  
+  .star {
+    font-size: 12px; /* Size of the star */
+    cursor: pointer;
+    color: #ccc; /* Default gray color */
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .star.highlighted {
+    color: #ffcc00; /* Highlighted star color */
+  }
+  
+  .star:hover {
+    color: #ff9900; /* Star color on hover */
+  }
+  

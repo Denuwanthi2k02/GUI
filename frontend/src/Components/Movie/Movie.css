@@ -60,6 +60,22 @@
 
             }
         }
+        
+        .mainContent{
+            padding: 2rem 0;
+            gap: 1rem;
+
+            .singleMoive{
+                overflow: hidden;
+                border-radius: 1rem;
+                box-shadow: 0 2px 8px 2 px rgba(178,178,178,0.334);
+
+
+            }
+
+
+
+        }
     }
 
   }
