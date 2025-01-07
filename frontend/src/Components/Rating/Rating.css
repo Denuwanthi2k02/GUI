@@ -4,6 +4,8 @@
     align-items: left;
     justify-content: left;
     margin: 20px;
+    padding-bottom: 5px;
+    padding-right: 3px;
   }
   
   .rating.vertical {
@@ -11,7 +13,7 @@
   }
   
   .star {
-    font-size: 12px; /* Size of the star */
+    font-size: 17px; /* Size of the star */
     cursor: pointer;
     color: #ccc; /* Default gray color */
     transition: color 0.2s ease-in-out;
