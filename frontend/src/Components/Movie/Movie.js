@@ -34,7 +34,7 @@ const Movie =() => {
                     <div className="singleMoive">
                         <div className="movieImg">
                             <img src={img} alt="Image Title"/>
-                            <div className="overlayInfro">
+                            <div className="overlayInfo">
                                 <h3>The Rule </h3>
                                 <p>
                                     A continuation of Pushpa's action-packed journey, exploring his rise in the underworld.
