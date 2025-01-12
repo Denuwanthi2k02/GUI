@@ -6,13 +6,14 @@
   box-sizing: border-box;
   font-family: 'poppins',sans-serif;
   transition:  .3s ease;
+ 
 
 }
 
 /* colors */
 :root{
   --primarycolor: orange;  /* A shade of blue */
-  --Hovercolor:#ff7700; /* A shade of green */
+  --Hovercolor:#a04f07; /* A shade of green */
   --blackcolor: #090400fc; /* Light gray */
   --textcolor:gray; /* Dark gray */
   --inputcolor:rgb(224, 220, 220);
@@ -76,6 +77,12 @@ li{
 
 }
 
+.btn :hover{
+  background: var(--Hovercolor);
+  
+
+}
+
 .btn:hover a{
   color:var(--whitecolor);
 }
@@ -115,4 +122,68 @@ input{
     grid-template-columns: repeat(2,1fr);
   }
   
+}
+
+
+@media screen and (min-width:1024px) {
+  .mainContent{
+    grid-template-columns: repeat(3,1fr);
+  }
+  
+}
+
+
+/* @media screen and (min-width:1240px) 
+
+  .container{
+    width: 75% !important;
+    margin: auto !important;
+  }
+
+  .section{
+    padding: 5rem 0.3rem;
+  }
+
+  .secIntro{
+    margin: 0 auto 3rem;
+  }
+
+  .secIntro .secTitle{
+    line-height: 2rem;
+    padding-bottom: 1rem;
+    font-size: 2.2rem;
+  }
+
+  .secIntro p{
+    font-size: 15px;
+
+  }
+  
+} */
+
+@media screen and (min-width:2560px) {
+  body{
+    zoom: 1.7;
+  }
+  
+}
+
+/* page desing */
+
+
+::selection{
+  background: var(--primarycolor);
+  color: var(--whitecolor);
+
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+  background: var(--greyBg)
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--primarycolor);
+  border-radius: 10px;
+  cursor: pointer;
 }

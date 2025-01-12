@@ -35,7 +35,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px; /* Adds consistent spacing between cards */
+    gap: 5px; /* Adds consistent spacing between cards */
 }
 
 .movie-card {
@@ -45,7 +45,7 @@
     overflow: hidden;
     box-shadow: 0 2px 4px var(--greytext);
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 300px;
+    width: 400px;
     margin: 10px;
 }
 

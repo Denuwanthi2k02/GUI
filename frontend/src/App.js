@@ -15,7 +15,7 @@ function App() {
       <Movie/>
       <UpcomingMovies/>
       <Footer/>
-      {/* <SeatBooking/> */}
+  
     </>
   );
 }

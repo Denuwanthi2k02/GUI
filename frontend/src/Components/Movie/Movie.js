@@ -1,5 +1,5 @@
 //Movie.js
-import React from "react";
+import React , {useEffect} from "react";
 import './Movie.css';
 import { BsArrowLeftShort } from 'react-icons/bs';
 import { BsArrowRightShort } from 'react-icons/bs';
@@ -8,6 +8,8 @@ import img1 from '../../Assets/The_Rule.jpg';
 import img2 from '../../Assets/Mandara.jpg';
 import img3 from '../../Assets/Sonic3.jpg';
 import img4 from '../../Assets/Mufasa.jpeg';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Data=[
 
@@ -52,11 +54,16 @@ const Data=[
 
 
 const Movie =() => {
+
+     useEffect(()=>{
+            Aos.init({duration:2000})
+        },[])
+
     return(
         <section className="Popular Movie Container">
             <div className="secContainer">
                 <div className="secHeader flex">
-                    <div className="textDiv">
+                    <div data-aos="fade-right" data-aos-duration="2500"  className="textDiv">
                         <h2 className="secTitle">
                             Popular Movies
                         </h2>
@@ -67,7 +74,7 @@ const Movie =() => {
                         </p>
                     </div>
 
-                    <div className="iconsDiv flex">
+                    <div data-aos="fade-left" data-aos-duration="2500"  className="iconsDiv flex">
                         <BsArrowLeftShort className="icon LeftIcon"/>
                         <BsArrowRightShort className="icon"/>
 
@@ -79,7 +86,7 @@ const Movie =() => {
                    {
                     Data.map(({id,imgSrc,movieTitle,language,about})=>{
                         return(
-                            <div className="singleMoive">
+                            <div data-aos="fade-up"  className="singleMoive">
                             <div className="movieImg">
                                 <img src={imgSrc} alt="Image Title"/>
                                 <div className="overlayInfo">

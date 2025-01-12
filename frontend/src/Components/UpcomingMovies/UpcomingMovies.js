@@ -1,10 +1,12 @@
 // UpcomingMovies.js
 
-import React from "react";
+import React , {useEffect} from "react";
 import "./UpcomingMovies.css";
 import img1 from '../../Assets/FlightRisk.jpeg';
 import img2 from '../../Assets/Dhadak2.jpeg';
 import img3 from '../../Assets/Kubera.jpg';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 
 
@@ -15,10 +17,13 @@ const movies = [
 ];
 
 const UpcomingMovies = () => {
+   useEffect(()=>{
+              Aos.init({duration:2000})
+          },[])
   return (
-    <section className="upcoming-movies">
-      <h2 className="section-title">Upcoming Movies</h2>
-      <div className="movies-container">
+    <section  className="upcoming-movies">
+      <h2  data-aos="fade-right" data-aos-duration="2000" className="section-title">Upcoming Movies</h2>
+      <div data-aos="fade-right" data-aos-duration="2500"  className="movies-container">
         {movies.map((movie) => (
           <div className="movie-card" key={movie.id}>
             <img src={movie.poster} alt={movie.title} className="movie-poster" />

@@ -2,7 +2,7 @@
     --primarycolor: orange;  /* A shade of blue */
     --Hovercolor:#ff7700; /* A shade of green */
     --blackcolor: #090400fc; /* Light gray */
-    --textcolor:gray; /* Dark gray */
+    --textcolor:rgb(77, 75, 75); /* Dark gray */
     --inputcolor:rgb(224, 220, 220);
     --greytext:rgba(96, 76, 76, 0.697);
     --greyBg:rgb(192, 192, 192);
@@ -13,7 +13,8 @@
   .home{
     height: 80vh;
     background: linear-gradient(rgba(33,33,33,0.522),rgba(33,33,33,0.522)),
-    url(../../Assets/homepage.jpg);
+    url(../../Assets/background1.jpg);
+    
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -54,6 +55,7 @@
         }
 
         .movieCard {
+            
             width: 80%;
             border-radius: 1rem;
             padding: 2rem;
@@ -150,4 +152,64 @@
     
   } 
 
+  @media screen and ( min-width:720px) {
+    .home{
+        .secContainer{
+            
+           .movieCard{
+            bottom: -10%;
+            grid-template-columns: repeat(4,1fr);
+
+           }
+        }
+    }
+    
+  }
   
+  
+  
+  @media screen and ( min-width:720px) {
+    .home{
+        .secContainer{
+           .homeText{
+            padding: 1rem 10rem;
+
+            .title{
+                font-size: 3.5rem;
+                margin: auto;
+                line-height: 4rem;
+            }
+
+            .subTitle{
+                width: 70%;     
+
+            }
+           }
+        }
+    }
+    
+  }
+
+   
+  @media screen and ( min-width:1024px) {
+    .home{
+        .secContainer{
+            .homeText{
+                .subTitle{
+                    font-size: 20px;
+                }
+            }
+
+            .movieCard{
+                width: 70%;
+            }
+        }
+    }
+    
+  }
+  
+
+
+
+
+ 
