@@ -1,0 +1,79 @@
+:root {
+    --primarycolor: orange;  /* A shade of blue */
+    --Hovercolor: #ff7700; /* A shade of green */
+    --blackcolor: #090400fc; /* Light gray */
+    --textcolor: gray; /* Dark gray */
+    --inputcolor: rgb(224, 220, 220);
+    --greytext: rgba(96, 76, 76, 0.697);
+    --greyBg: rgb(192, 192, 192);
+    --whitecolorDeam: white;
+    --whitecolor: white;
+  }
+  
+  .seat-booking-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: var(--textcolor);
+  }
+  
+  .seats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+  }
+  
+  .seat-row {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .seat {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--greyBg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: var(--inputcolor);
+  }
+  
+  .seat.available {
+    background-color: var(--whitecolorDeam);
+  }
+  
+  .seat.booked {
+    background-color: var(--primarycolor);
+    color: var(--whitecolor);
+    cursor: not-allowed;
+  }
+  
+  .seat:hover {
+    background-color: var(--Hovercolor);
+  }
+  
+  .message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: var(--primarycolor);
+  }
+  
+  .pay-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--primarycolor);
+    color: var(--whitecolor);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .pay-button:hover {
+    background-color: var(--Hovercolor);
+  }
+  

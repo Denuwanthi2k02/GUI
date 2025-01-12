@@ -66,6 +66,11 @@
             left: 50%;
             box-shadow: 0 2px 8px 4px rgba(178,178,178,0.45);
 
+
+             /* Stacks items vertically */
+           
+            
+
             .movieName, .language, .date{
                 width: 100%;
 
@@ -104,7 +109,45 @@
                 padding: .6rem 1.5rem;
                 color: var(--whitecolor);
                 font-weight: 600;
+                transform: none;
             }
         }
     }
   }
+
+  @media screen and ( min-width:495px) {
+    .home{
+        .secContainer{
+            .movieCard{
+                bottom:-100px;
+                width:90%;
+                grid-template-columns: repeat(2,1fr);
+
+                .btn{
+                    transform: translateY(15px);
+                }
+            }
+        }
+    }
+    
+  } 
+
+
+  @media screen and ( min-width:556px) {
+    .home{
+        .secContainer{
+            .homeText{
+                .title{
+                    font-size: 2.5rem;
+                }
+                .subTitle{
+                    font-size: 18px;
+                }
+            }
+           
+        }
+    }
+    
+  } 
+
+  

@@ -1,0 +1,75 @@
+:root {
+    --primarycolor: orange;
+    --Hovercolor: #ff7700;
+    --blackcolor: #090400fc;
+    --textcolor: gray;
+    --inputcolor: rgb(224, 220, 220);
+    --greytext: rgba(96, 76, 76, 0.697);
+    --greyBg: rgb(192, 192, 192);
+    --whitecolorDeam: white;
+    --whitecolor: white;
+  }
+
+.footer {
+    background-color: var(--blackcolor);
+    color: var(--whitecolor);
+    padding: 20px 10px;
+    text-align: center;
+    box-shadow: 0 -4px 6px var(--greytext);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo h2 {
+    color: var(--primarycolor);
+    margin-bottom: 5px;
+}
+
+.footer-logo p {
+    font-size: 0.9rem;
+    color: var(--greytext);
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    color: var(--whitecolor);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--primarycolor);
+}
+
+.footer-social a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: var(--whitecolor);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-social a:hover {
+    color: var(--Hovercolor);
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: var(--greytext);
+}

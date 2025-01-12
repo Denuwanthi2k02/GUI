@@ -1,3 +1,4 @@
+//Movie.js
 import React from "react";
 import './Movie.css';
 import { BsArrowLeftShort } from 'react-icons/bs';

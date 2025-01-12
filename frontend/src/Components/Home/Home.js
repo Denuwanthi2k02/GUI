@@ -8,7 +8,6 @@ return(
     <section className="home">
         <div className="secContainer container">
             <div className="homeText">
-
                 <h1 className="title">
                    Welcome!
                 </h1>
@@ -21,8 +20,9 @@ return(
                 </p>
 
                 <button className="btn">
-                    <a href="#">Explore Now</a>
+                    <a href="/exlore">Explore Now</a>
                 </button>
+                
             </div>
 
             <div className="movieCard grid">
@@ -46,6 +46,7 @@ return(
                 <div className="btn">
                     Search
                 </div>
+
             </div>
 
             

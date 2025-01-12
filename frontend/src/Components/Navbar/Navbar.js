@@ -17,12 +17,27 @@ const Navbar = () => {
         setActive('navBar ')
     }
 
+    //code to add background color to header
+
+    const[transparent,setTransparent] = useState ('header')
+    const addBg =()=>{
+        if (window.scrollY >=10){
+            setTransparent('header activeHeader')
+        }
+
+        else {
+            setTransparent('header')
+        }
+
+    }
+    window.addEventListener('scroll',addBg)
+
 
     return (
        <section className="navBarSection">
-        <div className="header">
+        <div className={transparent}>
             <div className="logoDiv">
-                <a href="#" className="logo">
+                <a href="/logo" className="logo">
                     <h1 className="flex"><FcFilmReel className="icon"/>ATOM TICKETS</h1>
                 </a>
             </div>
@@ -30,11 +45,11 @@ const Navbar = () => {
             <div className={active}>
                 <ul className="navLists flex">
                     <li className="navItem">
-                         <a href="#" className="navLink">Home</a>
+                         <a href="/link" className="navLink">Home</a>
                     </li>
 
                     <li className="navItem">
-                        <a href="#" className="navLink">Movies</a>
+                        <a href="/link" className="navLink">Movies</a>
                     </li>
                             {/* <li className="navItem">
                                 <a href="#" className="navLink">Seat Booking</a>
@@ -44,17 +59,17 @@ const Navbar = () => {
                             </li> */}
 
                     <li className="navItem">
-                        <a href="#" className="navLink">Contact</a>
+                        <a href="/link" className="navLink">Contact</a>
                     </li>
                             
 
                     <div className="headerBtns flex">
                         <button className="btn loginBtn">
-                            <a href="#" >Login</a>
+                            <a href="/link" >Login</a>
                         </button>
 
                         <button className="btn ">
-                            <a href="#" >Sign Up</a>
+                            <a href="/link" >Sign Up</a>
                         </button>
                     </div>
 

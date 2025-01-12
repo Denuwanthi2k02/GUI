@@ -110,4 +110,9 @@ input{
   font-size: 100%;
 }
 
-/* this is all for the default styling */
+@media screen and (min-width:556px) {
+  .mainContent{
+    grid-template-columns: repeat(2,1fr);
+  }
+  
+}
