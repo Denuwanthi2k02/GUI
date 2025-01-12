@@ -51,12 +51,6 @@ const Navbar = () => {
                     <li className="navItem dropdown">
                         <a href="/link" className="navLink">Movies</a>
                     </li>
-                            {/* <li className="navItem">
-                                <a href="#" className="navLink">Seat Booking</a>
-                            </li>
-                            <li className="navItem">
-                                <a href="#" className="navLink">Payment</a>
-                            </li> */}
 
                     <li className="navItem">
                         <a href="/link" className="navLink">Contact</a>
@@ -65,7 +59,7 @@ const Navbar = () => {
 
                     <div className="headerBtns flex">
                         <button className="btn loginBtn">
-                            <a href="/link" >Login</a>
+                            <a href="<Login/>" >Login</a>
                         </button>
 
                         <button className="btn ">
