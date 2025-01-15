@@ -1,2 +1,144 @@
+:root{
+    --primarycolor: orange;  /* A shade of blue */
+    --Hovercolor:#a04f07; /* A shade of green */
+    --blackcolor: #090400fc; /* Light gray */
+    --textcolor:gray; /* Dark gray */
+    --inputcolor:rgb(224, 220, 220);
+    --greytext:rgba(96, 76, 76, 0.697);
+    --greyBg:rgb(192, 192, 192);
+    --whitecolorDeam:white;
+    --whitecolor:white;
+  }
+  
+  body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  .center{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--greyBg);
+
+    .tickets1{
+        width: 550px;
+        height: fit-content;
+        border: 0.5mm solid rgba(0,0,0,0.08);
+        border-radius: 3mm;
+        box-sizing: border-box;
+        padding: 10px;
+        max-height: 96vh;
+        overflow: auto;
+        background: var(--whitecolor);
+        box-shadow: opx 25px 50px -12px rgba(0,0,0,0.25);
+
+        .tickets-selector{
+            background: rgb(243,243,243);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 20px;
+
+            .head{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 30px;
+
+                .title{
+                    font-size: 16px;
+                    font-weight: 600;                
+                }
+            }
+
+            .seats{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                min-height: 150px;
+                position: relative;
+
+                .status{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+
+                    .item{
+                        font-size: 12px;
+                        position: relative;
+                    }
+                }
+
+                .all-seats{
+                    display: grid;
+                    grid-template-columns: repeat(10,1fr);
+                    grid-gap: 15px;
+
+                    .seat{
+                        width: 20px;
+                        height: 20px;
+                        background: var(--whitecolor);
+                        border-radius: 0.5mm;
+
+                    }
+
+                    input{
+                        display: none;
+                    }
+                }
+
+            }
+        }
+    
+      }
+  }
 
   
+
+  .seats::before{
+    
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 220px;
+    height: 7px;
+    background:var(--greytext);
+    border-radius: 0 0 3mm 3mm;
+    border-top: 0.3mm solid rgb(180,180,180);
+  }
+
+  .item::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    transform: translate(0,-50%);
+    width: 10px;
+    height: 10px;
+    background: var(--whitecolor);
+    outline: 0.2mm solid rgb(120,120,120);
+    border-radius: 0.3mm;
+  }
+
+  .item:nth-child(2)::before{
+    background: rgb(180,180,180);
+    outline: none;
+  }
+
+  .item:nth-child(3)::before{
+    background:var(--primarycolor);
+    outline: none;
+  }

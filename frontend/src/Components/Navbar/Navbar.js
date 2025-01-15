@@ -45,7 +45,7 @@ const Navbar = () => {
             <div className={active}>
                 <ul className="navLists flex">
                     <li className="navItem">
-                         <a href="/link" className="navLink">Home</a>
+                         <a href="../Home/Home" className="navLink">Home</a>
                     </li>
 
                     <li className="navItem dropdown">
@@ -59,7 +59,7 @@ const Navbar = () => {
 
                     <div className="headerBtns flex">
                         <button className="btn loginBtn">
-                            <a href="<Login/>" >Login</a>
+                            <a href="../Login/Login" >Login</a>
                         </button>
 
                         <button className="btn ">
