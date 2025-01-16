@@ -1,7 +1,49 @@
-import React from 'react';
+import React, { useState } from "react";
 import "./SeatBooking.css";
 
+
+
+
 function SeatBooking() {
+
+
+  const totalSeats = 60; // Including the already created s1
+  const [seats, setSeats] = useState(
+    Array.from({ length: totalSeats }, (_, i) => ({
+      id: `s${i + 1}`,
+      booked: Math.random() < 0.5, // Randomly mark seats as booked
+      selected: false, // Track if the seat is selected
+    }))
+  );
+
+
+
+  const [count, setCount] = useState(0);
+  const [amount, setAmount] = useState(0);
+
+  const handleSeatChange = (id) => {
+    setSeats((prevSeats) =>
+      prevSeats.map((seat) =>
+        seat.id === id
+          ? { ...seat, selected: !seat.selected }
+          : seat
+      )
+    );
+
+    // Update count and amount based on selection
+    const seat = seats.find((seat) => seat.id === id);
+    if (!seat.selected) {
+      setCount((prevCount) => prevCount + 1);
+      setAmount((prevAmount) => prevAmount + 200);
+    } else {
+      setCount((prevCount) => prevCount - 1);
+      setAmount((prevAmount) => prevAmount - 200);
+    }
+  };
+
+
+
+
   return (
     <div className='center'>
       <div className='tickets1'>
@@ -18,8 +60,24 @@ function SeatBooking() {
             </div>
 
             <div className='all-seats'>
-              <input type='checkbox' name='tickets' id='s1'/>
-              <label for="s1" className='seat'/>    
+            {seats.map((seat) => (
+                <React.Fragment key={seat.id}>
+                   <input
+                    type="checkbox"
+                    name="tickets"
+                    id={seat.id}
+                    checked={seat.selected}
+                    disabled={seat.booked}
+                    onChange={() => handleSeatChange(seat.id)}
+                  />
+                  <label
+                    htmlFor={seat.id}
+                    className={`seat ${seat.booked ? "booked" : ""} ${
+                      seat.selected ? "selected" : ""
+                    }`}
+                  ></label>
+                </React.Fragment>
+              ))}    
             </div>
           </div>
 
@@ -85,11 +143,11 @@ function SeatBooking() {
         </div>
 
         <div className='price'>
-          <div className='total'>
+        <div className="total">
             <span>
-              <span className='count'>0</span>Tickets
+              <span className="count">{count}</span> Tickets
             </span>
-            <div className='amount'>0</div>
+            <div className="amount">Rs.{amount}</div>
           </div>
 
           <button type='button'>Book</button>
