@@ -1,13 +1,9 @@
 import React, { useState } from "react";
+import { Snackbar, Alert } from "@mui/material"; // Import Snackbar and Alert from MUI
 import "./SeatBooking.css";
 
-
-
-
 function SeatBooking() {
-
-
-  const totalSeats = 60; // Including the already created s1
+  const totalSeats = 60; // Total number of seats
   const [seats, setSeats] = useState(
     Array.from({ length: totalSeats }, (_, i) => ({
       id: `s${i + 1}`,
@@ -16,10 +12,9 @@ function SeatBooking() {
     }))
   );
 
-
-
   const [count, setCount] = useState(0);
   const [amount, setAmount] = useState(0);
+  const [showSnackbar, setShowSnackbar] = useState(false); // State for Snackbar visibility
 
   const handleSeatChange = (id) => {
     setSeats((prevSeats) =>
@@ -41,28 +36,37 @@ function SeatBooking() {
     }
   };
 
+  const handleBooking = () => {
+    if (count > 0) {
+      setShowSnackbar(true); // Show the snackbar if tickets are selected
+    } else {
+      alert("Please select at least one ticket to book.");
+    }
+  };
 
-
+  const handleCloseSnackbar = () => {
+    setShowSnackbar(false);
+  };
 
   return (
-    <div className='center'>
-      <div className='tickets1'>
-        <div className='tickets-selector'>
-          <div className='head'>
-            <div className='title'>Movie Name</div>
+    <div className="center">
+      <div className="tickets1">
+        <div className="tickets-selector">
+          <div className="head">
+            <div className="title">Movie Name</div>
           </div>
 
-          <div className='seats'>
-            <div className='status'>
-              <div className='item'>Available</div>
-              <div className='item'>Booked</div>
-              <div className='item'>Selected</div>
+          <div className="seats">
+            <div className="status">
+              <div className="item">Available</div>
+              <div className="item">Booked</div>
+              <div className="item">Selected</div>
             </div>
 
-            <div className='all-seats'>
-            {seats.map((seat) => (
+            <div className="all-seats">
+              {seats.map((seat) => (
                 <React.Fragment key={seat.id}>
-                   <input
+                  <input
                     type="checkbox"
                     name="tickets"
                     id={seat.id}
@@ -77,18 +81,17 @@ function SeatBooking() {
                     }`}
                   ></label>
                 </React.Fragment>
-              ))}    
+              ))}
             </div>
           </div>
 
-          <div className='timings'>
-            <div className='dates'>
-              <input type='radio' name='date' id="d1" checked/>
-              <label for='d1'className='dates-item'>
-                <div className='day'>Sun</div>
-                <div className='date'>11</div>
+          <div className="timings">
+            <div className="dates">
+              <input type="radio" name="date" id="d1" defaultChecked />
+              <label htmlFor="d1" className="dates-item">
+                <div className="day">Sun</div>
+                <div className="date">11</div>
               </label>
-
               <input type='radio' name='date' id="d2" />
               <label for='d2' className='dates-item'>
                 <div className='day'>Mon</div>
@@ -125,11 +128,13 @@ function SeatBooking() {
                 <div className='date'>17</div>
               </label>
             </div>
+           
 
-            <div className='times'>
-              <input type='radio' name='time' id='t1' checked/> 
-              <label for='t1' className='time'>11.00</label>
-
+            <div className="times">
+              <input type="radio" name="time" id="t1" defaultChecked />
+              <label htmlFor="t1" className="time">
+                11.00
+              </label>
               <input type='radio' name='time' id='t2' /> 
               <label for='t2' className='time'>14.30</label>
 
@@ -137,25 +142,38 @@ function SeatBooking() {
               <label for='t3' className='time'>18.00</label> 
 
               <input type='radio' name='time' id='t4' /> 
-              <label for='t4' className='time'>21.30</label>        
+              <label for='t4' className='time'>21.30</label>   
             </div>
           </div>
         </div>
 
-        <div className='price'>
-        <div className="total">
+        <div className="price">
+          <div className="total">
             <span>
               <span className="count">{count}</span> Tickets
             </span>
             <div className="amount">Rs.{amount}</div>
           </div>
 
-          <button type='button'>Book</button>
+          <button type="button" onClick={handleBooking}>
+            Book
+          </button>
         </div>
       </div>
-      
+
+      {/* Snackbar for Booking Confirmation */}
+      <Snackbar
+        open={showSnackbar}
+        autoHideDuration={3000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+      >
+        <Alert onClose={handleCloseSnackbar} severity="success" sx={{ width: "100%" }}>
+          Your booking is completed!
+        </Alert>
+      </Snackbar>
     </div>
-  )
+  );
 }
 
-export default SeatBooking
+export default SeatBooking;
