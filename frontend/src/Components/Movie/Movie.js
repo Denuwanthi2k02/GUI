@@ -60,7 +60,7 @@ const Movie =() => {
         },[])
 
     return(
-        <section className="Popular Movie Container">
+        <section className="Popular Movie Container" id="Movies">
             <div className="secContainer">
                 <div className="secHeader flex">
                     <div data-aos="fade-right" data-aos-duration="2500"  className="textDiv">

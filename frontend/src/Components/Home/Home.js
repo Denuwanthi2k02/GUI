@@ -13,7 +13,7 @@ import 'aos/dist/aos.css'
         Aos.init({duration:2000})
     },[])
 return(
-    <section className="home">
+    <section className="home" id="Home">
         <div className="secContainer container">
             <div className="homeText">
                 <h1 data-aos="fade-up"className="title">

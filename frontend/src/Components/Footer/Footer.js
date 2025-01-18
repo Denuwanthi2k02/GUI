@@ -11,7 +11,7 @@ const Footer = () => {
             },[])
 
   return (
-    <footer className="footer">
+    <footer className="footer" id='Footer'>
       <div data-aos="fade-up" data-aos-duration="2000" className="footer-content">
         <div className="footer-logo">
           <h2>Atom Tickets</h2>

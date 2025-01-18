@@ -45,15 +45,19 @@ const Navbar = () => {
             <div className={active}>
                 <ul className="navLists flex">
                     <li className="navItem">
-                         <a href="../Home/Home" className="navLink">Home</a>
-                    </li>
-
-                    <li className="navItem dropdown">
-                        <a href="/link" className="navLink">Movies</a>
+                         <a href="#Home" className="navLink">Home</a>
                     </li>
 
                     <li className="navItem">
-                        <a href="/link" className="navLink">Contact</a>
+                        <a href="#Movies" className="navLink">Popular Movies</a>
+                    </li>
+
+                    <li className="navItem">
+                        <a href="#Upcomming" className="navLink">Upcoming Movies</a>
+                    </li>
+
+                    <li className="navItem">
+                        <a href="#Footer" className="navLink">Contact</a>
                     </li>
                             
 

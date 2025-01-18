@@ -21,7 +21,7 @@ const UpcomingMovies = () => {
               Aos.init({duration:2000})
           },[])
   return (
-    <section  className="upcoming-movies">
+    <section  className="upcoming-movies" id="Upcomming">
       <h2  data-aos="fade-right" data-aos-duration="2000" className="section-title">Upcoming Movies</h2>
       <div data-aos="fade-right" data-aos-duration="2500"  className="movies-container">
         {movies.map((movie) => (
