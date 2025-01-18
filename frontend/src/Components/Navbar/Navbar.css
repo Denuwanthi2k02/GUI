@@ -93,7 +93,7 @@
                         border: 1px solid var(--primarycolor);
 
                         a{
-                            color:var(--primarycolor)
+                            color:var(--primarycolor);
                         }
 
                         &:hover{

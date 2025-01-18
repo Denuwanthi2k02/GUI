@@ -1,78 +1,113 @@
-.signup-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: var(--greyBg);
-    font-family: Arial, sans-serif;
-  }
-  
-  .signup-container h1 {
-    color: var(--primarycolor);
-    margin-bottom: 20px;
+:root {
+  --primarycolor: orange; 
+  --Hovercolor: #a04f07; 
+  --blackcolor: #090400fc; 
+  --textcolor: gray; 
+  --inputcolor: rgb(224, 220, 220); 
+  --greytext: rgba(96, 76, 76, 0.697); 
+  --greyBg: rgb(192, 192, 192); 
+  --whitecolorDeam: white; 
+  --whitecolor: white;
+}
 
-    
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: url(../../Assets/LoginPage.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--textcolor);
+  display: flex;
+  justify-content: flex-start;
+    padding-left: 150px;
+    padding-bottom: 120px;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.signup-card {
   
-  form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 400px;
-    background-color: var(--whitecolorDeam);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  label {
-    font-size: 1rem;
-    color: var(--textcolor);
-    margin-bottom: 5px;
-  }
-  
-  input {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid var(--inputcolor);
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  input:focus {
-    border-color: var(--primarycolor);
-    box-shadow: 0 0 5px var(--primarycolor);
-  }
-  
-  .signup-btn {
-    padding: 10px;
-    background-color: var(--primarycolor);
-    color: var(--whitecolor);
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .signup-btn:hover {
-    background-color: var(--Hovercolor);
-  }
-  
-  .login-link {
-    align-items: center;
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: var(--greytext);
-  }
-  
-  .login-link a {
-    color: var(--primarycolor);
-    text-decoration: none;
-  }
-  
-  .login-link a:hover {
-    text-decoration: underline;
-  }
-  
+  background-color: var(--whitecolorDeam);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  align-items: flex-start;
+  border-radius: 10px;
+  padding: 30px 40px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.brand-title {
+  font-size: 1.8rem;
+  color: var(--primarycolor);
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-size: 1rem;
+  color: var(--textcolor);
+  text-align: left;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid var(--inputcolor);
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--primarycolor);
+  box-shadow: 0 0 5px var(--primarycolor);
+}
+
+.signup-btn {
+  padding: 10px;
+  background-color: var(--primarycolor);
+  color: var(--whitecolor);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: var(--Hovercolor);
+}
+
+.login-link {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--greytext);
+}
+
+.login-link a {
+  color: var(--primarycolor);
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}

@@ -67,12 +67,12 @@ const Navbar = () => {
 
                     <div className="headerBtns flex">
                     <button className="btn loginBtn" onClick={() => navigate('/login')}>
-                Login
-              </button>
+                        Login
+                    </button>
 
-              <button className="btn" onClick={() => navigate('/signup')}>
-                Signup
-              </button>
+                    <button className="btn" onClick={() => navigate('/signup')}>
+                        Signup
+                    </button>
                     </div>
 
                 </ul>

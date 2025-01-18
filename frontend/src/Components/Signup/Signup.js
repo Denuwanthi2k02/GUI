@@ -1,26 +1,28 @@
 import React from "react";
-import "./Signup.css"; // Optional: Add styles for the SignUp page
+import "./Signup.css";
 
 const Signup = () => {
   return (
     <div className="signup-container" id="signup">
-      <h1>Sign Up</h1>
-      <form>
-        <label htmlFor="name">Full Name</label>
-        <input type="text" id="name" placeholder="Enter your full name" />
+      <div className="signup-card">
+        <h1 className="brand-title">Movie Ticket Booking</h1>
+        <form>
+          <label htmlFor="name">Full Name</label>
+          <input type="text" id="name" placeholder="Enter your full name" />
 
-        <label htmlFor="email">Email</label>
-        <input type="email" id="email" placeholder="Enter your email" />
+          <label htmlFor="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" />
 
-        <label htmlFor="password">Password</label>
-        <input type="password" id="password" placeholder="Enter a password" />
+          <label htmlFor="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" />
 
-        <button type="submit" className="signup-btn">Sign Up</button>
-      
+          <button type="submit" className="signup-btn">Sign Up</button>
+
           <p className="login-link">
-            Already have an account? <a href="/login">Log in</a>
+            Already have an account? <a href="#login">Log in</a>
           </p>
-          </form>
+        </form>
+      </div>
     </div>
   );
 };

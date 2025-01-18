@@ -18,12 +18,19 @@
   
   body {
     font-family: Arial, sans-serif;
-    background-color: var(--greyBg);
+    background: url(../../Assets/LoginPage.jpg);
+    background-repeat: no-repeat;
     color: var(--textcolor);
-    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: left;
+    justify-content: flex-start;
+    padding-left: 150px;
+    padding-bottom: 120px;
+    margin: auto;
+    position: relative;
   }
   
   .login-container {
@@ -42,6 +49,7 @@
     max-width: 400px;
     width: 100%;
     text-align: center;
+    justify-content: flex-start;
   }
   
   .brand-title {
