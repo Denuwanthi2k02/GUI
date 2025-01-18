@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { FcFilmReel } from 'react-icons/fc';
 import { AiFillCloseCircle } from 'react-icons/ai';
@@ -8,6 +9,9 @@ import { BsGrid3X3Gap } from 'react-icons/bs'
 const Navbar = () => {
     //code to toggle /show navbar
     const [active, setActive] =useState ('navBar')
+
+    const navigate = useNavigate();// React Router's navigation hook
+
     const showNav=()=>{
         setActive('navBar activeNavBar')
     }
@@ -53,7 +57,7 @@ const Navbar = () => {
                     </li>
 
                     <li className="navItem">
-                        <a href="#Upcomming" className="navLink">Upcoming Movies</a>
+                        <a href="#Upcoming" className="navLink">Upcoming Movies</a>
                     </li>
 
                     <li className="navItem">
@@ -62,13 +66,13 @@ const Navbar = () => {
                             
 
                     <div className="headerBtns flex">
-                        <button className="btn loginBtn">
-                            <a href="../Login/Login" >Login</a>
-                        </button>
+                    <button className="btn loginBtn" onClick={() => navigate('/login')}>
+                Login
+              </button>
 
-                        <button className="btn ">
-                            <a href="/link" >Sign Up</a>
-                        </button>
+              <button className="btn" onClick={() => navigate('/signup')}>
+                Signup
+              </button>
                     </div>
 
                 </ul>

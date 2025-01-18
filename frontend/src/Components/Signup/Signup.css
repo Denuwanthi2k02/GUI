@@ -11,6 +11,8 @@
   .signup-container h1 {
     color: var(--primarycolor);
     margin-bottom: 20px;
+
+    
   }
   
   form {
@@ -59,6 +61,7 @@
   }
   
   .login-link {
+    align-items: center;
     margin-top: 10px;
     font-size: 0.9rem;
     color: var(--greytext);

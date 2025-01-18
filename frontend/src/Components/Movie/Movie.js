@@ -1,5 +1,6 @@
 //Movie.js
 import React , {useEffect} from "react";
+import { useNavigate } from 'react-router-dom';
 import './Movie.css';
 import { BsArrowLeftShort } from 'react-icons/bs';
 import { BsArrowRightShort } from 'react-icons/bs';
@@ -55,12 +56,19 @@ const Data=[
 
 const Movie =() => {
 
+    const navigate = useNavigate(); 
+
+    const handleButtonClick = () => {
+      navigate('/seatBooking');
+    };
+
+
      useEffect(()=>{
             Aos.init({duration:2000})
         },[])
 
     return(
-        <section className="Popular Movie Container" id="Movies">
+        <section className="Popular Movie Container">
             <div className="secContainer">
                 <div className="secHeader flex">
                     <div data-aos="fade-right" data-aos-duration="2500"  className="textDiv">

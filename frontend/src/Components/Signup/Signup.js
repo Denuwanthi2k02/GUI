@@ -3,7 +3,7 @@ import "./Signup.css"; // Optional: Add styles for the SignUp page
 
 const Signup = () => {
   return (
-    <div className="signup-container">
+    <div className="signup-container" id="signup">
       <h1>Sign Up</h1>
       <form>
         <label htmlFor="name">Full Name</label>
@@ -16,10 +16,11 @@ const Signup = () => {
         <input type="password" id="password" placeholder="Enter a password" />
 
         <button type="submit" className="signup-btn">Sign Up</button>
-      </form>
-      <p className="login-link">
-        Already have an account? <a href="/login">Log in</a>
-      </p>
+      
+          <p className="login-link">
+            Already have an account? <a href="/login">Log in</a>
+          </p>
+          </form>
     </div>
   );
 };
