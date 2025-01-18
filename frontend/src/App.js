@@ -28,9 +28,7 @@ function App() {
             <Navbar />
             <Suspense fallback={<div>Loading...</div>}>
               <div id="Home"><Home /></div>
-              <div id="Movies">
-                <Movie />
-                </div>
+              <div id="Movies"><Movie /></div>
               <div id="Upcoming"><UpcomingMovies/></div>
               <div id="Footer"><Footer /></div>
             </Suspense>
@@ -38,11 +36,12 @@ function App() {
         } />
         
         {/* SeatBooking page layout, includes Navbar and Footer */}
-        {/* <Route path="/seatBooking" element={
+        <Route path="/seatBooking" element={
           <>
             <SeatBooking />
           </>
-        } /> */}
+        } />
+
 
         
         <Route path="/login" element={

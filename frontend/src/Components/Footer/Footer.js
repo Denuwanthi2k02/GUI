@@ -19,10 +19,10 @@ const Footer = () => {
         </div>
         <div  className="footer-links">
           <ul>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-            <li><a href="/terms">Terms of Service</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
+            <li>Email: support@movietickets.com </li>
+            <li>Phone: +1 (800) 123-4567</li>
+            <li>Address: 123 Cinema Lane, Movietown, Filmstate, 56789</li>
+           
           </ul>
         </div>
         <div className="footer-social">

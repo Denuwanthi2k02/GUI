@@ -1,8 +1,14 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom"; 
 import { Snackbar, Alert } from "@mui/material"; // Import Snackbar and Alert from MUI
 import "./SeatBooking.css";
 
 function SeatBooking() {
+
+  const location = useLocation(); // Access location object
+  const { movieName } = location.state || {}; // Retrieve movieName from state
+
+
   const totalSeats = 60; // Total number of seats
   const [seats, setSeats] = useState(
     Array.from({ length: totalSeats }, (_, i) => ({
@@ -53,7 +59,7 @@ function SeatBooking() {
       <div className="tickets1">
         <div className="tickets-selector">
           <div className="head">
-            <div className="title">Movie Name</div>
+            <div className="title">{movieName || "Movie Name"}</div>
           </div>
 
           <div className="seats">

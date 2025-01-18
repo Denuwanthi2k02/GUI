@@ -58,9 +58,9 @@ const Movie =() => {
 
     const navigate = useNavigate(); 
 
-    const handleButtonClick = () => {
-      navigate('/seatBooking');
-    };
+    const handleButtonClick = (movieTitle) => {
+        navigate('/seatBooking', { state: { movieName: movieTitle } });
+      };
 
 
      useEffect(()=>{
@@ -102,7 +102,10 @@ const Movie =() => {
                                     <p>
                                        {about}
                                     </p>
-                                    <BsArrowRightShort className="icon"/>
+                                    <BsArrowRightShort
+                                    className="icon"
+                                    onClick={() => handleButtonClick(movieTitle)} // Pass movieTitle to the function
+                                    />
     
                                 </div>
                             </div>
