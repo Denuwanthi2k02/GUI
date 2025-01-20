@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import { useLocation } from "react-router-dom"; 
+import React, { useState,useEffect } from "react";
+import { useLocation,useNavigate } from "react-router-dom"; 
 import { Snackbar, Alert } from "@mui/material"; // Import Snackbar and Alert from MUI
 import "./SeatBooking.css";
 
-function SeatBooking() {
+function SeatBooking({ isLoggedIn }) {
 
   const location = useLocation(); // Access location object
+  const navigate = useNavigate();
   const { movieName } = location.state || {}; // Retrieve movieName from state
 
 
@@ -21,6 +22,15 @@ function SeatBooking() {
   const [count, setCount] = useState(0);
   const [amount, setAmount] = useState(0);
   const [showSnackbar, setShowSnackbar] = useState(false); // State for Snackbar visibility
+  const [bookingStatus, setBookingStatus] = useState("Pending"); // Track booking status
+
+  // Redirect user if not logged in
+  useEffect(() => {
+    if (!isLoggedIn) {
+      alert("Please log in or sign up to book seats.");
+      navigate("/login"); // Redirect to login page
+    }
+  }, [isLoggedIn, navigate]);
 
   const handleSeatChange = (id) => {
     setSeats((prevSeats) =>

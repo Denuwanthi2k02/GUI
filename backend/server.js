@@ -26,6 +26,25 @@ db.run(`
     }
 });
 
+
+// Create 'movies' table if it doesn't exist
+db.run(`
+    CREATE TABLE IF NOT EXISTS movies (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        title TEXT NOT NULL,
+        language TEXT NOT NULL,
+        about TEXT NOT NULL,
+        img_url TEXT NOT NULL
+    )
+`, (err) => {
+    if (err) {
+        console.error('Error creating movies table:', err.message);
+    } else {
+        console.log('Movies table created or already exists.');
+    }
+});
+
+//===========================================================
 // Signup API
 app.post('/signup', (req, res) => {
     const { full_name, email, password } = req.body;
@@ -80,5 +99,40 @@ app.post('/login', (req, res) => {
 
         // If email and password are valid, send a success response
         res.status(200).json({ message: 'Login successful', userId: user.id });
+    });
+});
+
+
+//====================================================
+// Add movies to the database
+app.post('/add-movie', (req, res) => {
+    const { title, language, about, imgSrc } = req.body;
+
+    if (!title || !language || !about || !imgSrc) {
+        return res.status(400).json({ error: 'All fields are required.' });
+    }
+
+    const query = `INSERT INTO movies (title, language, about, img_url) VALUES (?, ?, ?, ?)`;
+    db.run(query, [title, language, about, imgSrc], function (err) {
+        if (err) {
+            console.error('Error inserting movie:', err.message);
+            return res.status(500).json({ error: 'Database error.' });
+        }
+
+        res.status(201).json({ message: 'Movie added successfully.', movieId: this.lastID });
+    });
+});
+
+
+//================================================================
+// Get all movies
+app.get('/movies', (req, res) => {
+    const query = `SELECT * FROM movies`;
+    db.all(query, [], (err, rows) => {
+        if (err) {
+            console.error('Error fetching movies:', err.message);
+            return res.status(500).json({ error: 'Database error.' });
+        }
+        res.status(200).json(rows);
     });
 });

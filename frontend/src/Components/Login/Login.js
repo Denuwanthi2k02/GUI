@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
-function Login() {
+function Login({ onLogin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+
+  const navigate = useNavigate(); // Navigation hook from React Router
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -20,6 +23,9 @@ function Login() {
       if (response.ok) {
         alert(result.message); // Login success
         // Optionally, store the user ID or token here
+        onLogin(); // Update login state in App.js
+        navigate("/"); // Redirect to home page
+
       } else {
         setError(result.error); // Login failed
       }
@@ -30,6 +36,7 @@ function Login() {
   };
 
   return (
+  <div className="login-page">
     <div className="login-container">
       <div className="login-card">
         <h1 className="brand-title">Movie Ticket Booking</h1>
@@ -57,10 +64,11 @@ function Login() {
           {error && <p className="error">{error}</p>}
 
           <p className="signup-link">
-            Don't have an account? <a href="#signup">Sign up</a>
+            Don't have an account? <a href="/signup">Sign up</a>
           </p>
         </form>
       </div>
+    </div>
     </div>
   );
 }

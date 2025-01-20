@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; 
 import "./Signup.css";
 
-const Signup = () => {
+const Signup = ({ onSignup }) => {
+
+  const navigate = useNavigate(); // React Router navigation hook
+  const [error, setError] = useState("");
+
+
   const handleSignup = async (e) => {
     e.preventDefault();
     const full_name = document.getElementById('name').value;
@@ -18,8 +24,10 @@ const Signup = () => {
       const result = await response.json();
       if (response.ok) {
         alert(result.message);
+        onSignup();
+        navigate("/"); // Redirect to the home page after signup
       } else {
-        alert(result.error);
+        setError(result.error);
       }
     } catch (error) {
       console.error('Error:', error);
@@ -27,6 +35,7 @@ const Signup = () => {
   };
 
   return (
+    <div className="signup-page">
     <div className="signup-container" id="signup">
       <div className="signup-card">
         <h1 className="brand-title">Movie Ticket Booking</h1>
@@ -42,11 +51,14 @@ const Signup = () => {
 
           <button type="submit" className="signup-btn">Sign Up</button>
 
+          {error && <p className="error">{error}</p>}
+
           <p className="login-link">
-            Already have an account? <a href="#login">Log in</a>
+            Already have an account?{" "} <a href="/login" >Log in</a>
           </p>
         </form>
       </div>
+    </div>
     </div>
   );
 };

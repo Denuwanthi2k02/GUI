@@ -18,17 +18,27 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: url(../../Assets/LoginPage.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: var(--whitecolor); /* Default background for all pages */
   color: var(--textcolor);
-  display: flex;
-  justify-content: flex-start;
-    padding-left: 150px;
-    padding-bottom: 120px;
-  align-items: center;
-  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100%;
+  
+
+}
+
+.signup-page {
+    
+  background: url(../../Assets/LoginPage.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh; /* Full height for the login page */
+width: 100%;
 }
 
 .signup-container {

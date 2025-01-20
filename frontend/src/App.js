@@ -1,10 +1,11 @@
 
-import React, { Suspense, lazy } from "react";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { Suspense, lazy,useState } from "react";
+import { BrowserRouter as Router, Routes, Route,useNavigate } from 'react-router-dom';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 import SeatBooking from "./Components/SeatBooking/SeatBooking";
+import AfterLoginNav from "./Components/AfterLoginNav/AfterLoginNav";
 
 
 
@@ -18,6 +19,14 @@ const Signup =  lazy(() => import('./Components/Signup/Signup'));
 
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false); // State to manage login
+  const [signedUp, setsignedUp] = useState(false);
+  const handleLogin = () => {
+    setLoggedIn(true); // Update login state
+  };
+  const handleSignup = () => {
+    setLoggedIn(true); // Update login state
+  };
   return (
 
     <Router>
@@ -25,7 +34,8 @@ function App() {
         {/* Main page layout */}
         <Route path="/" element={
           <>
-            <Navbar />
+            {loggedIn ? <AfterLoginNav /> : <Navbar />}
+            
             <Suspense fallback={<div>Loading...</div>}>
               <div id="Home"><Home /></div>
               <div id="Movies"><Movie /></div>
@@ -38,7 +48,7 @@ function App() {
         {/* SeatBooking page layout, includes Navbar and Footer */}
         <Route path="/seatBooking" element={
           <>
-            <SeatBooking />
+          <SeatBooking isLoggedIn={loggedIn} />
           </>
         } />
 
@@ -46,13 +56,13 @@ function App() {
         
         <Route path="/login" element={
                   <Suspense fallback={<div>Loading...</div>}>
-                    <Login />
+                    <Login onLogin={handleLogin} />
                   </Suspense>
          } />
 
         <Route path="/signup" element={
                   <Suspense fallback={<div>Loading...</div>}>
-                    <Signup />
+                    <Signup onSignup={handleSignup} />
                   </Suspense>
         } />
 
