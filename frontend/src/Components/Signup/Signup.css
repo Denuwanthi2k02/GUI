@@ -30,7 +30,7 @@ body {
 
 .signup-page {
     
-  background: url(../../Assets/LoginPage.jpg);
+  /* background: url(../../Assets/LoginPage.jpg); */
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;

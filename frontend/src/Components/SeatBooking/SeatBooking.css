@@ -18,12 +18,13 @@
   }
 
   .center{
+    padding-top: 50px;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--greyBg);
+    /* background: var(--greyBg); */
 
     .tickets1{
         width: 550px;
@@ -55,7 +56,8 @@
 
                 .title{
                     font-size: 35px;
-                    font-weight: 600;                
+                    font-weight: 600; 
+                    color: var(--blackcolor);             
                 }
             }
 
@@ -77,6 +79,7 @@
                     .item{
                         font-size: 12px;
                         position: relative;
+                        color: var(--blackcolor);
                     }
                 }
 
@@ -145,6 +148,7 @@
 
                 .day{
                   font-size: 12px;
+                  
 
                 }
                 
@@ -164,6 +168,7 @@
                   background: rgb(233,233,233);
                   border-radius: 2mm;
                   cursor: pointer;
+                 
                 }
               }
               

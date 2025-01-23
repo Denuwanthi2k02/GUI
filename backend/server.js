@@ -26,7 +26,7 @@ db.run(`
     }
 });
 
-
+//=========================================================
 // Create 'movies' table if it doesn't exist
 db.run(`
     CREATE TABLE IF NOT EXISTS movies (
@@ -106,14 +106,14 @@ app.post('/login', (req, res) => {
 //====================================================
 // Add movies to the database
 app.post('/add-movie', (req, res) => {
-    const { title, language, about, imgSrc } = req.body;
+    const { title, language, about, img_url } = req.body;
 
-    if (!title || !language || !about || !imgSrc) {
+    if (!title || !language || !about || !img_url) {
         return res.status(400).json({ error: 'All fields are required.' });
     }
 
     const query = `INSERT INTO movies (title, language, about, img_url) VALUES (?, ?, ?, ?)`;
-    db.run(query, [title, language, about, imgSrc], function (err) {
+    db.run(query, [title, language, about, img_url], function (err) {
         if (err) {
             console.error('Error inserting movie:', err.message);
             return res.status(500).json({ error: 'Database error.' });

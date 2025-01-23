@@ -66,11 +66,11 @@ const Movie =() => {
                 </div>
 
                 <div className="mainContent grid">
-                    {movies.slice(currentIndex * moviesPerPage, (currentIndex + 1) * moviesPerPage).map(({ id, title, language, about, imgSrc }) => {
+                    {movies.slice(currentIndex * moviesPerPage, (currentIndex + 1) * moviesPerPage).map(({ id, title, language, about, img_url }) => {
                         return (
                             <div key={id} data-aos="fade-up" className="singleMoive">
                                 <div className="movieImg">
-                                    <img src={imgSrc} alt={title} />
+                                    <img src={img_url} alt={title} />
                                     <div className="overlayInfo">
                                         <h3>{title}</h3>
                                         <p>{about}</p>
