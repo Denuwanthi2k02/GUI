@@ -15,16 +15,21 @@ const Movie =() => {
     const moviesPerPage = 4; // Number of movies to show at a time
     const navigate = useNavigate(); 
 
-    const handleButtonClick = (movieTitle) => {
-        navigate('/seatBooking', { state: { movieName: movieTitle } });
-      };
 
+    // Handle button click to navigate to SeatBooking with the movie's title
+    const handleButtonClick = (movieTitle,movieId) => {
+        navigate('/seatBooking', { state: { movieName: movieTitle , movieId: movieId} });
+      };
+      
+    // Move to the previous set of movies
       const handleLeftClick = () => {
         if (currentIndex > 0) {
             setCurrentIndex(currentIndex - 1);
         }
     };
 
+
+    // Move to the next set of movies
     const handleRightClick = () => {
         if (currentIndex < Math.floor(movies.length / moviesPerPage)) {
             setCurrentIndex(currentIndex + 1);
@@ -32,6 +37,7 @@ const Movie =() => {
     };
 
 
+    // Fetch movies from the backend API
      useEffect(()=>{
            // Fetch movies from the API
         fetch("http://localhost:5000/movies")
@@ -74,7 +80,7 @@ const Movie =() => {
                                     <div className="overlayInfo">
                                         <h3>{title}</h3>
                                         <p>{about}</p>
-                                        <BsArrowRightShort className="icon" onClick={() => handleButtonClick(title)} />
+                                        <BsArrowRightShort className="icon" onClick={() => handleButtonClick(title,id)} />
                                     </div>
                                 </div>
                                 <div className="destFooter">

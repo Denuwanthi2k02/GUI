@@ -15,24 +15,24 @@ const Signup = ({ onSignup }) => {
     const password = document.getElementById('password').value;
 
     try {
-      const response = await fetch('http://localhost:5000/signup', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ full_name, email, password }),
-      });
+        const response = await fetch('http://localhost:5000/signup', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ full_name, email, password }),
+        });
 
-      const result = await response.json();
-      if (response.ok) {
-        alert(result.message);
-        onSignup();
-        navigate("/"); // Redirect to the home page after signup
-      } else {
-        setError(result.error);
-      }
+        const result = await response.json();
+        if (response.ok) {
+            alert(result.message);
+            onSignup(result.userId); // Pass the userId to onSignup
+            navigate("/"); // Redirect to the home page after signup
+        } else {
+            setError(result.error);
+        }
     } catch (error) {
-      console.error('Error:', error);
+        console.error('Error:', error);
     }
-  };
+};
 
   return (
     <div className="signup-page">

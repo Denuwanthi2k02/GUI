@@ -2,10 +2,10 @@
 
 import React, { useEffect } from "react";
 import "./UpcomingMovies.css";
-import img1 from "../../Assets/FlightRisk.jpeg";
-import img2 from "../../Assets/Dhadak2.jpeg";
-import img3 from "../../Assets/Kubera.jpg";
-import img4 from "../../Assets/Avatar3.jpg";
+import img1 from "../../Assets1/FlightRisk.jpeg";
+import img2 from "../../Assets1/Dhadak2.jpeg";
+import img3 from "../../Assets1/Kubera.jpg";
+import img4 from "../../Assets1/Avatar3.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 

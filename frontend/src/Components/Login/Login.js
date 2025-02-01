@@ -13,27 +13,26 @@ function Login({ onLogin }) {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:5000/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
-      });
+        const response = await fetch('http://localhost:5000/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password }),
+        });
 
-      const result = await response.json();
-      if (response.ok) {
-        alert(result.message); // Login success
-        // Optionally, store the user ID or token here
-        onLogin(); // Update login state in App.js
-        navigate("/"); // Redirect to home page
+        const result = await response.json();
 
-      } else {
-        setError(result.error); // Login failed
-      }
+        if (response.ok) {
+            alert(result.message); // Login success
+            onLogin(result.userId); // Pass the userId to onLogin
+            navigate("/"); // Redirect to home page
+        } else {
+            setError(result.error); // Login failed
+        }
     } catch (error) {
-      console.error('Error:', error);
-      setError('An error occurred. Please try again.');
+        console.error('Error:', error);
+        setError('An error occurred. Please try again.');
     }
-  };
+};
 
   return (
   <div className="login-page">
@@ -48,6 +47,7 @@ function Login({ onLogin }) {
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
 
           <label htmlFor="password">Password</label>
@@ -57,6 +57,7 @@ function Login({ onLogin }) {
             placeholder="Enter your password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
 
           <button type="submit" className="login-btn">Login</button>

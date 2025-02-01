@@ -1,6 +1,6 @@
 
 import React, { Suspense, lazy,useState } from "react";
-import { BrowserRouter as Router, Routes, Route,useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
@@ -20,13 +20,21 @@ const Signup =  lazy(() => import('./Components/Signup/Signup'));
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false); // State to manage login
-  const [signedUp, setsignedUp] = useState(false);
-  const handleLogin = () => {
+  const [userId, setUserId] = useState(null);
+  // Handle login
+  const handleLogin = (userId) => {
     setLoggedIn(true); // Update login state
+    setUserId(userId); // Store the userId
   };
-  const handleSignup = () => {
+
+
+  // Handle signup
+  const handleSignup = (userId) => {
     setLoggedIn(true); // Update login state
+    setUserId(userId); // Store the userId
   };
+
+
   return (
 
     <Router>
@@ -48,7 +56,7 @@ function App() {
         {/* SeatBooking page layout, includes Navbar and Footer */}
         <Route path="/seatBooking" element={
           <>
-          <SeatBooking isLoggedIn={loggedIn} />
+           <SeatBooking isLoggedIn={loggedIn} userId={userId} />
           </>
         } />
 

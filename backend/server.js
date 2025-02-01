@@ -44,6 +44,30 @@ db.run(`
     }
 });
 
+//=========================================================
+// Create 'bookings' table if it doesn't exist
+db.run(`
+    CREATE TABLE IF NOT EXISTS bookings (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        user_id INTEGER NOT NULL,
+        movie_id INTEGER NOT NULL,
+        seats TEXT NOT NULL,
+        total_amount REAL NOT NULL,
+        booking_date TEXT NOT NULL,
+        show_time TEXT NOT NULL,
+        FOREIGN KEY (user_id) REFERENCES users(id),
+        FOREIGN KEY (movie_id) REFERENCES movies(id)
+    )
+`, (err) => {
+    if (err) {
+        console.error('Error creating bookings table:', err.message);
+    } else {
+        console.log('Bookings table created or already exists.');
+    }
+});
+
+
+
 //===========================================================
 // Signup API
 app.post('/signup', (req, res) => {
@@ -136,3 +160,57 @@ app.get('/movies', (req, res) => {
         res.status(200).json(rows);
     });
 });
+
+
+//==================================================================
+// Add a booking
+app.post('/book', (req, res) => {
+    const { user_id, movie_id, seats, date, time } = req.body;
+    console.log(req.body); // Debugging
+
+    // Calculate total amount (assuming each seat costs 200)
+    const total_amount = seats.split(',').length * 200;
+
+    // Check if all required fields are provided
+    if (!user_id || !movie_id || !seats || !date || !time) {
+        return res.status(400).json({ error: 'All fields are required.' });
+    }
+
+    const query = `
+        INSERT INTO bookings (user_id, movie_id, seats, total_amount, booking_date, show_time)
+        VALUES (?, ?, ?, ?, ?, ?)
+    `;
+    db.run(query, [user_id, movie_id, seats, total_amount, date, time], function (err) {
+        if (err) {
+            console.error('Error inserting booking:', err.message);
+            return res.status(500).json({ error: 'Database error.' });
+        }
+
+        res.status(201).json({ message: 'Booking successful.', bookingId: this.lastID });
+    });
+});
+
+
+//=======================================================================
+// Get bookings for a specific user
+app.get('/user-bookings/:userId', (req, res) => {
+    const { userId } = req.params;
+
+    const query = `
+        SELECT b.id AS booking_id, b.seats, b.total_amount, b.booking_date, b.show_time, 
+               m.title AS movie_title, m.language 
+        FROM bookings b
+        JOIN movies m ON b.movie_id = m.id
+        WHERE b.user_id = ?
+    `;
+    db.all(query, [userId], (err, rows) => {
+        if (err) {
+            console.error('Error fetching bookings:', err.message);
+            return res.status(500).json({ error: 'Database error.' });
+        }
+
+        res.status(200).json(rows);
+    });
+});
+
+

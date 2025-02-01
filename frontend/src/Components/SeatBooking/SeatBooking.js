@@ -3,11 +3,11 @@ import { useLocation,useNavigate } from "react-router-dom";
 import { Snackbar, Alert } from "@mui/material"; // Import Snackbar and Alert from MUI
 import "./SeatBooking.css";
 
-function SeatBooking({ isLoggedIn }) {
+function SeatBooking({ isLoggedIn ,userId}) {
 
   const location = useLocation(); // Access location object
   const navigate = useNavigate();
-  const { movieName } = location.state || {}; // Retrieve movieName from state
+  const { movieName,movieId } = location.state || {}; // Retrieve movieName from state
 
 
   const totalSeats = 60; // Total number of seats
@@ -22,7 +22,7 @@ function SeatBooking({ isLoggedIn }) {
   const [count, setCount] = useState(0);
   const [amount, setAmount] = useState(0);
   const [showSnackbar, setShowSnackbar] = useState(false); // State for Snackbar visibility
-  const [bookingStatus, setBookingStatus] = useState("Pending"); // Track booking status
+  //   // Track booking status
 
   // Redirect user if not logged in
   useEffect(() => {
@@ -52,13 +52,45 @@ function SeatBooking({ isLoggedIn }) {
     }
   };
 
-  const handleBooking = () => {
+const handleBooking = () => {
     if (count > 0) {
-      setShowSnackbar(true); // Show the snackbar if tickets are selected
+        // Prepare booking data
+        const bookingData = {
+            user_id: userId, // Ensure this is passed correctly
+            movie_id: movieId, // Ensure this is passed correctly
+            seats: seats
+                .filter((seat) => seat.selected)
+                .map((seat) => seat.id)
+                .join(','), // Convert selected seat IDs to a comma-separated string
+            date: document.querySelector('input[name="date"]:checked').nextElementSibling.textContent.trim(),
+            time: document.querySelector('input[name="time"]:checked').nextElementSibling.textContent.trim(),
+        };
+
+        // Send booking data to the backend
+        fetch('http://localhost:5000/book', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(bookingData),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                if (data.message) {
+                    alert(data.message);
+                    setShowSnackbar(true); // Show the snackbar
+                } else {
+                    alert(data.error || 'Failed to book tickets. Please try again.');
+                }
+            })
+            .catch((error) => {
+                console.error('Error booking tickets:', error);
+                alert('An error occurred while booking tickets.');
+            });
     } else {
-      alert("Please select at least one ticket to book.");
+        alert("Please select at least one ticket to book.");
     }
-  };
+};
 
   const handleCloseSnackbar = () => {
     setShowSnackbar(false);
