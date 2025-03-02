@@ -67,6 +67,23 @@ db.run(`
 });
 
 
+//==========================================================
+// Create 'upcoming_movies' table if it doesn't exist
+db.run(`
+    CREATE TABLE IF NOT EXISTS upcoming_movies (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        title TEXT NOT NULL,
+        release_date TEXT NOT NULL,
+        img_url TEXT NOT NULL
+    )
+`, (err) => {
+    if (err) {
+        console.error('Error creating upcoming_movies table:', err.message);
+    } else {
+        console.log('Upcoming movies table created or already exists.');
+    }
+});
+
 
 //===========================================================
 // Signup API
@@ -161,6 +178,40 @@ app.get('/movies', (req, res) => {
     });
 });
 
+
+//=================================================================
+// Get all upcoming movies
+app.get('/upcoming-movies', (req, res) => {
+    const query = `SELECT * FROM upcoming_movies`;
+    db.all(query, [], (err, rows) => {
+        if (err) {
+            console.error('Error fetching upcoming movies:', err.message);
+            return res.status(500).json({ error: 'Database error.' });
+        }
+        res.status(200).json(rows);
+    });
+});
+
+
+//=================================================================
+// Add an upcoming movie
+app.post('/add-upcoming-movie', (req, res) => {
+    const { title, release_date, img_url } = req.body;
+
+    if (!title || !release_date || !img_url) {
+        return res.status(400).json({ error: 'All fields are required.' });
+    }
+
+    const query = `INSERT INTO upcoming_movies (title, release_date, img_url) VALUES (?, ?, ?)`;
+    db.run(query, [title, release_date, img_url], function (err) {
+        if (err) {
+            console.error('Error inserting upcoming movie:', err.message);
+            return res.status(500).json({ error: 'Database error.' });
+        }
+
+        res.status(201).json({ message: 'Upcoming movie added successfully.', movieId: this.lastID });
+    });
+});
 
 //==================================================================
 // Add a booking

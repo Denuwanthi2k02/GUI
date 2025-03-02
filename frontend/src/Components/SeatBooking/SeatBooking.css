@@ -1,8 +1,8 @@
 :root{
-    --primarycolor: orange;  /* A shade of blue */
-    --Hovercolor:#a04f07; /* A shade of green */
-    --blackcolor: #090400fc; /* Light gray */
-    --textcolor:gray; /* Dark gray */
+    --primarycolor: orange; 
+    --Hovercolor:#a04f07;
+    --blackcolor: #090400fc; 
+    --textcolor:gray; 
     --inputcolor:rgb(224, 220, 220);
     --greytext:rgba(96, 76, 76, 0.697);
     --greyBg:rgb(192, 192, 192);
@@ -18,13 +18,15 @@
   }
 
   .center{
-    padding-top: 50px;
-    width: 100%;
-    height: 100%;
+    background: url(../../Assets1/LoginPage.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background: var(--greyBg); */
+    height: 100vh; 
+    width: 100%;
 
     .tickets1{
         width: 550px;
@@ -37,9 +39,11 @@
         overflow: auto;
         background: var(--whitecolor);
         box-shadow: opx 25px 50px -12px rgba(0,0,0,0.25);
+        position: fixed;
+        left: 130px;
 
         .tickets-selector{
-            background: rgb(243,243,243);
+            background: rgb(245, 228, 211);
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -214,15 +218,9 @@
             border: none;
             cursor: pointer;
           }
-
-          
         }
-        
-    
       }
   }
-
-  
 
   .seats::before{
     
@@ -238,6 +236,7 @@
     border-top: 0.3mm solid rgb(180,180,180);
   }
 
+  /* Styling for seat status items (Available, Booked, Selected) */
   .item::before{
     content: "";
     position: absolute;
@@ -251,16 +250,20 @@
     border-radius: 0.3mm;
   }
 
+
+/* Booked seat status item styling */
   .item:nth-child(2)::before{
     background: rgb(180,180,180);
     outline: none;
   }
 
+  /* Selected seat status item styling */
   .item:nth-child(3)::before{
     background:var(--primarycolor);
     outline: none;
   }
 
+  /* Hide checkboxes used for selecting seats */
   .center input{
     display: none;
 }

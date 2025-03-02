@@ -3,16 +3,18 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 function Login({ onLogin }) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [email, setEmail] = useState(""); // Stores email input
+  const [password, setPassword] = useState(""); // Stores password input
+  const [error, setError] = useState("");  // Stores error message if login fails
 
   const navigate = useNavigate(); // Navigation hook from React Router
 
+  // Function to handle login submission
   const handleLogin = async (e) => {
     e.preventDefault();
 
     try {
+        // Sends POST request to the server with email and password for authentication
         const response = await fetch('http://localhost:5000/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

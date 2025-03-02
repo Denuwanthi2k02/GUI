@@ -1,25 +1,32 @@
-// UpcomingMovies.js
-
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import "./UpcomingMovies.css";
-import img1 from "../../Assets1/FlightRisk.jpeg";
-import img2 from "../../Assets1/Dhadak2.jpeg";
-import img3 from "../../Assets1/Kubera.jpg";
-import img4 from "../../Assets1/Avatar3.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const movies = [
-  { id: 1, title: "Flight Risk", releaseDate: "Jan 15, 2025", poster: img1 },
-  { id: 2, title: "Dhadak 2", releaseDate: "Feb 10, 2025", poster: img2 },
-  { id: 3, title: "Kubera", releaseDate: "Mar 5, 2025", poster: img3 },
-  { id: 4, title: "Avatar 3", releaseDate: "Dec 18, 2025", poster: img4 },
-];
-
 const UpcomingMovies = () => {
+  const [movies, setMovies] = useState([]); // State to hold the list of movies
+
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 2000 }); // Initialize AOS with a duration of 2000ms for animations
+
+
+    // Fetch upcoming movies from the API
+    const fetchUpcomingMovies = async () => {
+      try {
+        const response = await fetch("http://localhost:5000/upcoming-movies");
+        if (!response.ok) {
+          throw new Error("Failed to fetch upcoming movies.");
+        }
+        const data = await response.json();
+        setMovies(data);
+      } catch (error) {
+        console.error("Error fetching upcoming movies:", error);
+      }
+    };
+
+    fetchUpcomingMovies();
   }, []);
+
 
   return (
     <section className="upcoming-movies">
@@ -35,13 +42,13 @@ const UpcomingMovies = () => {
           {movies.map((movie) => (
             <div className="movie-card" key={movie.id} data-aos="fade-up">
               <img
-                src={movie.poster}
+                src={movie.img_url}
                 alt={movie.title}
                 className="movie-poster"
               />
               <div className="movie-info">
                 <h3 className="movie-title">{movie.title}</h3>
-                <p className="release-date">Release Date: {movie.releaseDate}</p>
+                <p className="release-date">Release Date: {movie.release_date}</p>
               </div>
             </div>
           ))}

@@ -6,7 +6,7 @@ import "./SeatBooking.css";
 function SeatBooking({ isLoggedIn ,userId}) {
 
   const location = useLocation(); // Access location object
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // To navigate between pages
   const { movieName,movieId } = location.state || {}; // Retrieve movieName from state
 
 
@@ -19,10 +19,10 @@ function SeatBooking({ isLoggedIn ,userId}) {
     }))
   );
 
+  // States for tracking seat count, amount, and Snackbar visibility
   const [count, setCount] = useState(0);
   const [amount, setAmount] = useState(0);
-  const [showSnackbar, setShowSnackbar] = useState(false); // State for Snackbar visibility
-  //   // Track booking status
+  const [showSnackbar, setShowSnackbar] = useState(false); // To track Snackbar visibility
 
   // Redirect user if not logged in
   useEffect(() => {
@@ -32,6 +32,7 @@ function SeatBooking({ isLoggedIn ,userId}) {
     }
   }, [isLoggedIn, navigate]);
 
+    // Function to handle seat selection (click on a seat)
   const handleSeatChange = (id) => {
     setSeats((prevSeats) =>
       prevSeats.map((seat) =>
@@ -72,7 +73,7 @@ const handleBooking = () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(bookingData),
+            body: JSON.stringify(bookingData), // Convert booking data to JSON
         })
             .then((res) => res.json())
             .then((data) => {

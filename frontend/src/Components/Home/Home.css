@@ -10,6 +10,7 @@
     --whitecolor:white;
   }
 
+  /* Reset default margin and padding for all elements */
   * {
     margin: 0;
     padding: 0;
@@ -18,13 +19,12 @@
 
 body {
     margin: 0;
-    
     padding: 0;
     width: 100%;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-
+/* Main home section styling */
   .home{
     height: 80vh;
     width: 100vw;
@@ -83,11 +83,7 @@ body {
             left: 50%;
             box-shadow: 0 2px 8px 4px rgba(178,178,178,0.45);
 
-
-             /* Stacks items vertically */
-           
-            
-
+            /* Input fields inside the movieCard */
             .movieName, .language, .date{
                 width: 100%;
 
@@ -134,6 +130,7 @@ body {
     }
   }
 
+  /* Responsive Design */
   @media screen and ( min-width:495px) {
     .home{
         .secContainer{

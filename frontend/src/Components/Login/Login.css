@@ -30,7 +30,7 @@
   
   .login-page {
     
-    background: url(../../Assets1/LoginPage.jpg);
+  background: url(../../Assets1/LoginPage.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -43,7 +43,8 @@
   
   .login-container {
     display: flex;
-    justify-content: center;
+    position: fixed;
+  left: 130px; /* Move the item 50% from the left */
     align-items: center;
     height: 100%;
     width: 100%;

@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import "./Rating.css";
 
 const Rating = () => {
+  // State to store the rating selected by the user (initially 0)
   const [rating, setRating] = useState(0);
+
+  // State to store the rating selected by the user (initially 0)
   const [hover, setHover] = useState(0);
 
   return (

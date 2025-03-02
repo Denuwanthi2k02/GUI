@@ -1,8 +1,8 @@
 :root{
-    --primarycolor: orange;  /* A shade of blue */
-    --Hovercolor:#ff7700; /* A shade of green */
-    --blackcolor: #090400fc; /* Light gray */
-    --textcolor:gray; /* Dark gray */
+    --primarycolor: orange;  
+    --Hovercolor:#ff7700; 
+    --blackcolor: #090400fc; 
+    --textcolor:gray;
     --inputcolor:rgb(224, 220, 220);
     --greytext:rgba(96, 76, 76, 0.697);
     --greyBg:rgb(192, 192, 192);
@@ -19,7 +19,7 @@
         background: transparent;
         width: 100%;
         padding: 1rem;
-        z-index: 1000;
+        z-index: 1000; /* Ensure navbar stays above other elements */
     
 
     .logoDiv{
@@ -39,8 +39,9 @@
         }
     }
 
+    /* Mobile navigation styles */
     @media screen and (max-width : 768px) {
-        .navBar{
+         .navBar{
             background: var(--greyBg);
             position: absolute;
             height: max-content;
@@ -60,7 +61,7 @@
 
 
                 .navItem{
-                    padding: 1rem 0;/* on the wide screen padding should be: 0 1rem */
+                    padding: 1rem 0;/* Adjust padding for mobile */
 
                     .navLink{
                         color: var(--textcolor);
@@ -108,6 +109,7 @@
 
             }
 
+            /* Close button for mobile navigation */
             .closeNavBar{
                 position: absolute;
                 top: 1rem;
@@ -120,11 +122,13 @@
 
         }
 
+         /* Active navbar (visible) */
         .activeNavBar{
             left: 0;
         }
     }
 
+    /* Toggle button for mobile view */
     .toggleNavBar{
         .icon{
             font-size: 25px;
@@ -136,6 +140,7 @@
     }
     }
 
+    /* Active header background when scrolling */
     .activeHeader{
         background: var(--greyBg);
         box-shadow: 0 2px 8px 2px rgba(178,178,178,0.334);
@@ -144,6 +149,7 @@
   }
 
 
+  /* Tablet and larger screens */
   @media screen and ( min-width:769px ) {
     .navBarSection{
         .toggleNavBar, .closeNavBar{
@@ -205,6 +211,8 @@
     
   } 
 
+
+  /* Desktop view adjustments */
   @media screen and (min-width:960px) {
     .header{
         .navBar{
@@ -218,6 +226,7 @@
     
   }
 
+  /* Large screen adjustments */
   @media screen and (min-width:1024px) {
    .header{
     padding: 1rem 8.5rem !important;
