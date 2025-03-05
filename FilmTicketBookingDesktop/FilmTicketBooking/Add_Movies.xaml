@@ -1,0 +1,312 @@
+﻿<Window x:Class="FilmTicketBooking.Add_Movies"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FilmTicketBooking"
+        mc:Ignorable="d"
+        Title="Add_Movies" Height="450" Width="800"
+        MaxWidth="800" MaxHeight="450"
+        ResizeMode="NoResize" 
+        WindowStartupLocation="Manual"
+        Left="200" Top="100">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   HorizontalAlignment="Center"
+                   Margin="20,20,10,5"
+                   TextWrapping="Wrap" 
+                   Text="Add  Movie Form" 
+                   FontSize="30" 
+                   FontWeight="Bold" 
+                   Foreground="black"                  
+                   Width="360" Height="40"/>
+
+        <Rectangle HorizontalAlignment="Stretch" 
+                   VerticalAlignment="Stretch" 
+                   Grid.RowSpan="7"
+                   Grid.ColumnSpan="2">
+
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#CC5500" Offset="0" />
+                    <GradientStop Color="#88353535" Offset="1" />
+                    <GradientStop Color="#00008B" Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+
+        </Rectangle>
+
+        <!--Film Name-->
+        <TextBlock HorizontalAlignment="Center" 
+                   Grid.Row="1" 
+                   TextWrapping="Wrap" 
+                   Text="Film Name" 
+                   VerticalAlignment="Center" 
+                   FontSize="16" 
+                   FontWeight="Bold"/>
+
+        <!--Language of Film-->
+        <TextBlock Margin="10,0,10,0" 
+                   Grid.Row="2" 
+                   TextWrapping="Wrap" 
+                   Text="Language of the Film" 
+                   VerticalAlignment="Center" 
+                   FontSize="16" 
+                   FontWeight="Bold"/>
+
+        <!--About-->
+        <TextBlock Margin="64,0,64,0" 
+                   Grid.Row="3" 
+                   TextWrapping="Wrap" 
+                   Text="About" 
+                   VerticalAlignment="Center" 
+                   FontSize="16" 
+                   FontWeight="Bold"/>
+
+        <!--Image-->
+        <TextBlock Margin="64,19,64,0" 
+                   Grid.Row="4" 
+                   TextWrapping="Wrap" 
+                   Text="Image " 
+                   VerticalAlignment="Top" 
+                   FontSize="16" 
+                   FontWeight="Bold"/>
+
+        <Button Grid.Row="5"
+                Grid.Column="1"
+                Content="Save"
+                Background="Orange" 
+                FontWeight="Bold"
+                Cursor="Hand"
+                Click="Save_Product" Margin="281,17,199,17">
+
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="Orange" CornerRadius="15" Padding="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
+
+        <Button Grid.Row="5"
+                Grid.Column="1"
+                Content="Cancel" 
+                Click="Cancel"
+                Background="Orange" 
+                FontWeight="Bold" 
+                Margin="430,17,50,17"
+                Cursor="Hand">
+
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="Orange" CornerRadius="15" Padding="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
+
+
+
+
+        <!--FirstName-->
+
+        <TextBox TextWrapping="Wrap" 
+                BorderBrush="#FFC2C2C2" 
+                TextAlignment="Justify" 
+                FontSize="11" 
+                RenderTransformOrigin="0.525,-1.642" 
+                Background="#FFC2C2C2" 
+                Margin="0,17,0,16" 
+                HorizontalAlignment="Center" 
+                Width="500"
+                x:Name="Film_name" 
+                Grid.Column="1" 
+                Grid.Row="1" 
+                Height="40" 
+                >
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="Foreground" Value="Black"/>
+                    <!-- Text color -->
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <!-- Make text bold -->
+                    <Setter Property="Padding" Value="5"/>
+                    <!-- Add padding -->
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <!-- Remove default border -->
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TextBox">
+                                <Border Background="{TemplateBinding Background}" 
+                        BorderBrush="Gray" 
+                        BorderThickness="2"
+                        CornerRadius="10"  
+                            Padding="5">
+                                    <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+
+
+
+        <TextBox TextWrapping="Wrap" 
+            BorderBrush="#FFC2C2C2" 
+            TextAlignment="Justify" 
+            FontSize="11" 
+            RenderTransformOrigin="0.525,-1.642" 
+            Background="#FFC2C2C2" 
+            Margin="0,16,0,16" 
+            HorizontalAlignment="Center" 
+            Width="500"
+            x:Name="Language_Film" 
+             Grid.Column="1" 
+             Grid.Row="2" 
+             Height="40" 
+             >
+
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Foreground" Value="Black"/>
+                    <!-- Text color -->
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <!-- Make text bold -->
+                    <Setter Property="Padding" Value="5"/>
+                    <!-- Add padding -->
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <!-- Remove default border -->
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <Border Background="{TemplateBinding Background}" 
+                                    BorderBrush="Gray" 
+                                    BorderThickness="2"
+                                    CornerRadius="10"  
+                                    Padding="5">
+                                    <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+
+
+
+        <TextBox TextWrapping="Wrap" 
+            BorderBrush="#FFC2C2C2" 
+            TextAlignment="Justify" 
+            FontSize="11" 
+            RenderTransformOrigin="0.525,-1.642" 
+            Background="#FFC2C2C2" 
+            Margin="0,16,0,16" 
+            HorizontalAlignment="Center" 
+            Width="500"
+            x:Name="About_film" 
+            Grid.Column="1" 
+            Grid.Row="3" 
+            Height="40" 
+            >
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Foreground" Value="Black"/>
+                    <!-- Text color -->
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <!-- Make text bold -->
+                    <Setter Property="Padding" Value="5"/>
+                    <!-- Add padding -->
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <!-- Remove default border -->
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <Border Background="{TemplateBinding Background}" 
+                                    BorderBrush="Gray" 
+                                    BorderThickness="2"
+                                    CornerRadius="10"  
+                                    Padding="5">
+                                    <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+
+
+        <TextBox 
+            TextWrapping="Wrap" 
+            BorderBrush="#FFC2C2C2" 
+            TextAlignment="Justify" 
+            FontSize="11" 
+            RenderTransformOrigin="0.525,-1.642" 
+            Background="#FFC2C2C2" 
+            Margin="50,10,50,23"
+            x:Name="Image_url" 
+            Grid.Column="1" 
+            Grid.Row="4" 
+            Height="40" 
+            >
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Setter Property="Foreground" Value="Black"/>
+                    <!-- Text color -->
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <!-- Make text bold -->
+                    <Setter Property="Padding" Value="5"/>
+                    <!-- Add padding -->
+                    <Setter Property="BorderThickness" Value="0"/>
+                    <!-- Remove default border -->
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <Border Background="{TemplateBinding Background}" 
+                                    BorderBrush="Gray" 
+                                    BorderThickness="2"
+                                    CornerRadius="10"  
+                                    Padding="5">
+                                    <ScrollViewer Margin="0" x:Name="PART_ContentHost"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+
+
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,165 @@
+﻿<Window x:Class="FilmTicketBooking.Upcome_Movie_Management"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FilmTicketBooking"
+        mc:Ignorable="d"
+        Title="Upcome_Movie_Management" Height="450" Width="800"
+        MaxWidth="800" MaxHeight="450"
+        ResizeMode="NoResize" 
+        WindowStartupLocation="Manual"
+        Left="200" Top="100">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle HorizontalAlignment="Stretch" 
+           VerticalAlignment="Stretch" 
+           Grid.ColumnSpan="4"
+           Grid.RowSpan="3">
+
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#CC5500" Offset="0" />
+                    <GradientStop Color="#88353535" Offset="1" />
+                    <GradientStop Color="#00008B" Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+
+        </Rectangle>
+
+        <!--Add Button-->
+        <TextBlock  Grid.Column="0"
+                    Grid.ColumnSpan="4"
+                    TextWrapping="Wrap" 
+                    Text="Upcoming Movie Management Panel" 
+                    FontSize="25" 
+                    FontWeight="Bold" 
+                    Foreground="black" 
+                    TextAlignment="Center" 
+                    HorizontalAlignment="Left" 
+                    VerticalAlignment="Center" 
+                    Margin="133,0,0,0" Width="497"
+                    />
+
+
+        <Button Grid.Row="3"
+                Grid.Column="0"
+                Content="Add Movie" 
+                HorizontalAlignment="Center"         
+                VerticalAlignment="center" 
+                Width="120" 
+                Height="38"
+                Background="Orange" 
+                FontWeight="Bold"
+                Click="AddUpMovie" Cursor="Hand">
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="Orange" CornerRadius="15" Padding="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
+
+        <!--Edit Button-->
+        <Button Grid.Row="3"
+                Grid.Column="1"
+                Content="Edit Movie " 
+                HorizontalAlignment="Center"          
+                VerticalAlignment="center" 
+                Width="120" 
+                Height="38"
+                Background="Orange" 
+                FontWeight="Bold" Cursor="Hand"
+                Click="EditUpMovie">
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="Orange" CornerRadius="15" Padding="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
+
+        <!--Delete Button-->
+        <Button Grid.Row="2"
+                Grid.Column="3"
+                Content="Back" 
+                HorizontalAlignment="Center"         
+                VerticalAlignment="Center" 
+                Width="120" 
+                Height="38"
+                Background="Orange" 
+                FontWeight="Bold" Cursor="Hand"
+                Click="Back_Button">
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="Orange" CornerRadius="15" Padding="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
+
+        <DataGrid Grid.Row="1" 
+          Grid.Column="0"
+          Grid.ColumnSpan="4"
+          x:Name="MovieGridU"
+          AutoGenerateColumns="False"
+          CanUserAddRows="False"
+          HeadersVisibility="Column"
+          ColumnWidth="*"
+          ScrollViewer.HorizontalScrollBarVisibility="Auto"
+          ScrollViewer.VerticalScrollBarVisibility="Auto">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="100"/>
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="250"/>
+                <DataGridTextColumn Header="Release_Date" Binding="{Binding Release_Date}" Width="200"/>
+                <DataGridTextColumn Header="Img_Url" Binding="{Binding Img_Url}" Width="250"/>
+               
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+        <Button Grid.Row="2"
+            Grid.Column="2"
+            Content="Delete Movie" 
+            HorizontalAlignment="Center"         
+            VerticalAlignment="Center" 
+            Width="120" 
+            Height="38"
+            Background="Orange" 
+            FontWeight="Bold" Cursor="Hand"
+            Click="DeleteUpMovie">
+
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="Orange" CornerRadius="15" Padding="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
+    </Grid>
+</Window>

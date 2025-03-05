@@ -1,0 +1,91 @@
+﻿<Window x:Class="FilmTicketBooking.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FilmTicketBooking"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        MaxWidth="800" MaxHeight="450"
+        ResizeMode="NoResize" 
+        WindowStartupLocation="Manual"
+        Left="200" Top="100">
+
+    <Grid>
+         
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Image Source="D:\Visual Studio\FilmTicketBooking\background1.jpg" 
+               Stretch="Fill" 
+               HorizontalAlignment="Stretch" 
+               VerticalAlignment="Stretch"
+               Grid.RowSpan="3"/>
+
+        <Rectangle HorizontalAlignment="Stretch" 
+                   VerticalAlignment="Stretch" 
+                   Grid.RowSpan="3">
+            
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#88353535" Offset="0" />
+                    <GradientStop Color="#88353535" Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+            
+        </Rectangle>
+
+
+
+        <!-- Title -->
+        <TextBlock Grid.Row="0"
+                   TextWrapping="Wrap" 
+                   Text="ATOM TICKETS" 
+                   FontSize="50" 
+                   FontWeight="Bold" 
+                   Foreground="White" 
+                   TextAlignment="Center" 
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Top" 
+                   Margin="0,60,0,5"/>
+
+        <!-- Welcome Text -->
+        <TextBlock Grid.Row="1"
+                   TextWrapping="Wrap" 
+                   Text="Welcome to the Film Ticket Booking Admin Panel, where you can manage movies and releases!" 
+                   HorizontalAlignment="Center" 
+                   Foreground="White" 
+                   FontSize="20" 
+                   TextAlignment="Center"
+                   Margin="5"/>
+
+        <!-- Button -->
+        <Button Grid.Row="2"
+                Content="Get Started" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"
+                Width="158" 
+                Height="58" 
+                Click="GetStrated" 
+                Background="Orange" 
+                FontWeight="Bold" 
+                FontSize="18"
+                Margin="20"
+                Cursor="Hand"
+                >
+
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="Orange" CornerRadius="15" Padding="10">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+
+        </Button>
+
+    </Grid>
+</Window>
