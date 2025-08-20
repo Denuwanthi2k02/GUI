@@ -17,7 +17,6 @@ The Film Ticket Booking system consists of both a web and a desktop application.
 
 ### Desktop Application 🖥️
 
-- **👨‍💼 Administrator Access**: Only admins can log in.
 - **📝 CRUD Operations**: Admins can create, update, delete, and manage movie listings (both released and upcoming movies).
 - **🔄 Shared Database**: Uses the same SQLite database as the web application for consistency.
 
