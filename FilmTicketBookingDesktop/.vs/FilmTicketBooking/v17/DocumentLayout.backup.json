@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|c:\\users\\dewmini\\documents\\github\\gui\\filmticketbookingdesktop\\filmticketbooking\\add_upcome_movie.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|solutionrelative:filmticketbooking\\add_upcome_movie.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|c:\\users\\dewmini\\documents\\github\\gui\\filmticketbookingdesktop\\filmticketbooking\\upcome_movie_management.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|solutionrelative:filmticketbooking\\upcome_movie_management.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -15,20 +11,28 @@
       "RelativeMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|solutionrelative:filmticketbooking\\selection.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|c:\\users\\dewmini\\documents\\github\\gui\\filmticketbookingdesktop\\filmticketbooking\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|solutionrelative:filmticketbooking\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|c:\\users\\dewmini\\documents\\github\\gui\\filmticketbookingdesktop\\filmticketbooking\\moviedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|solutionrelative:filmticketbooking\\moviedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|c:\\users\\dewmini\\documents\\github\\gui\\filmticketbookingdesktop\\filmticketbooking\\movie_management _panel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|solutionrelative:filmticketbooking\\movie_management _panel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|c:\\users\\dewmini\\documents\\github\\gui\\filmticketbookingdesktop\\filmticketbooking\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|solutionrelative:filmticketbooking\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|c:\\users\\dewmini\\documents\\github\\gui\\filmticketbookingdesktop\\filmticketbooking\\add_upcome_movie.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|solutionrelative:filmticketbooking\\add_upcome_movie.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|c:\\users\\dewmini\\documents\\github\\gui\\filmticketbookingdesktop\\filmticketbooking\\add_movies.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|solutionrelative:filmticketbooking\\add_movies.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|c:\\users\\dewmini\\documents\\github\\gui\\filmticketbookingdesktop\\filmticketbooking\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|solutionrelative:filmticketbooking\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|c:\\users\\dewmini\\documents\\github\\gui\\filmticketbookingdesktop\\filmticketbooking\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|solutionrelative:filmticketbooking\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0EEF3767-4FAC-42CE-A4B6-E9D76BDD46B5}|FilmTicketBooking\\FilmTicketBooking.csproj|c:\\users\\dewmini\\documents\\github\\gui\\filmticketbookingdesktop\\filmticketbooking\\movie_management _panel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,7 +78,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 2,
+              "Title": "MovieDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\MovieDbContext.cs",
+              "RelativeDocumentMoniker": "FilmTicketBooking\\MovieDbContext.cs",
+              "ToolTip": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\MovieDbContext.cs",
+              "RelativeToolTip": "FilmTicketBooking\\MovieDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T06:22:57.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\App.xaml",
               "RelativeDocumentMoniker": "FilmTicketBooking\\App.xaml",
@@ -86,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Selection.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\Selection.xaml.cs",
               "RelativeDocumentMoniker": "FilmTicketBooking\\Selection.xaml.cs",
@@ -94,12 +111,11 @@
               "RelativeToolTip": "FilmTicketBooking\\Selection.xaml.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAIwC4AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T18:59:52.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T18:59:52.068Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Upcome_Movie_Management.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\Upcome_Movie_Management.xaml.cs",
               "RelativeDocumentMoniker": "FilmTicketBooking\\Upcome_Movie_Management.xaml.cs",
@@ -107,12 +123,11 @@
               "RelativeToolTip": "FilmTicketBooking\\Upcome_Movie_Management.xaml.cs",
               "ViewState": "AgIAAFEAAAAAAAAAAAAowF4AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T18:30:44.85Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T18:30:44.85Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Add_Upcome_Movie.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\Add_Upcome_Movie.xaml.cs",
               "RelativeDocumentMoniker": "FilmTicketBooking\\Add_Upcome_Movie.xaml.cs",
@@ -120,12 +135,11 @@
               "RelativeToolTip": "FilmTicketBooking\\Add_Upcome_Movie.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T18:18:16.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T18:18:16.721Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Add_Movies.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\Add_Movies.xaml.cs",
               "RelativeDocumentMoniker": "FilmTicketBooking\\Add_Movies.xaml.cs",
@@ -133,12 +147,11 @@
               "RelativeToolTip": "FilmTicketBooking\\Add_Movies.xaml.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAA3wEMAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T17:32:45.384Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T17:32:45.384Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "upcomngMovies.cs",
               "DocumentMoniker": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\upcomngMovies.cs",
               "RelativeDocumentMoniker": "FilmTicketBooking\\upcomngMovies.cs",
@@ -146,12 +159,11 @@
               "RelativeToolTip": "FilmTicketBooking\\upcomngMovies.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T12:19:57.011Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T12:19:57.011Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Movie_Management _Panel.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\Movie_Management _Panel.xaml.cs",
               "RelativeDocumentMoniker": "FilmTicketBooking\\Movie_Management _Panel.xaml.cs",
@@ -159,60 +171,59 @@
               "RelativeToolTip": "FilmTicketBooking\\Movie_Management _Panel.xaml.cs",
               "ViewState": "AgIAAF0AAAAAAAAAAAAAAGUAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T12:14:13.879Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T12:14:13.879Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Add_Movies.xaml",
               "DocumentMoniker": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\Add_Movies.xaml",
               "RelativeDocumentMoniker": "FilmTicketBooking\\Add_Movies.xaml",
-              "ToolTip": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\Add_Movies.xaml",
-              "RelativeToolTip": "FilmTicketBooking\\Add_Movies.xaml",
+              "ToolTip": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\Add_Movies.xaml*",
+              "RelativeToolTip": "FilmTicketBooking\\Add_Movies.xaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-03T11:52:44.996Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Add_Upcome_Movie.xaml",
               "DocumentMoniker": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\Add_Upcome_Movie.xaml",
               "RelativeDocumentMoniker": "FilmTicketBooking\\Add_Upcome_Movie.xaml",
-              "ToolTip": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\Add_Upcome_Movie.xaml",
-              "RelativeToolTip": "FilmTicketBooking\\Add_Upcome_Movie.xaml",
+              "ToolTip": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\Add_Upcome_Movie.xaml*",
+              "RelativeToolTip": "FilmTicketBooking\\Add_Upcome_Movie.xaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-03T11:50:58.583Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\MainWindow.xaml",
               "RelativeDocumentMoniker": "FilmTicketBooking\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\MainWindow.xaml",
-              "RelativeToolTip": "FilmTicketBooking\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\MainWindow.xaml*",
+              "RelativeToolTip": "FilmTicketBooking\\MainWindow.xaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-03T11:50:52.665Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Movie_Management _Panel.xaml",
               "DocumentMoniker": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\Movie_Management _Panel.xaml",
               "RelativeDocumentMoniker": "FilmTicketBooking\\Movie_Management _Panel.xaml",
-              "ToolTip": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\Movie_Management _Panel.xaml",
-              "RelativeToolTip": "FilmTicketBooking\\Movie_Management _Panel.xaml",
+              "ToolTip": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\Movie_Management _Panel.xaml*",
+              "RelativeToolTip": "FilmTicketBooking\\Movie_Management _Panel.xaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-03T11:50:49.047Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "movie.cs",
               "DocumentMoniker": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\movie.cs",
               "RelativeDocumentMoniker": "FilmTicketBooking\\movie.cs",
@@ -220,29 +231,28 @@
               "RelativeToolTip": "FilmTicketBooking\\movie.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T11:50:47.734Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-03T11:50:47.734Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Selection.xaml",
               "DocumentMoniker": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\Selection.xaml",
               "RelativeDocumentMoniker": "FilmTicketBooking\\Selection.xaml",
-              "ToolTip": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\Selection.xaml",
-              "RelativeToolTip": "FilmTicketBooking\\Selection.xaml",
+              "ToolTip": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\Selection.xaml*",
+              "RelativeToolTip": "FilmTicketBooking\\Selection.xaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-03T11:50:38.774Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Upcome_Movie_Management.xaml",
               "DocumentMoniker": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\Upcome_Movie_Management.xaml",
               "RelativeDocumentMoniker": "FilmTicketBooking\\Upcome_Movie_Management.xaml",
-              "ToolTip": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\Upcome_Movie_Management.xaml",
-              "RelativeToolTip": "FilmTicketBooking\\Upcome_Movie_Management.xaml",
+              "ToolTip": "C:\\Users\\Dewmini\\Documents\\GitHub\\GUI\\FilmTicketBookingDesktop\\FilmTicketBooking\\Upcome_Movie_Management.xaml*",
+              "RelativeToolTip": "FilmTicketBooking\\Upcome_Movie_Management.xaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-03T11:50:18.739Z",
               "EditorCaption": ""

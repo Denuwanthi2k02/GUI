@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FilmTicketBooking"
         mc:Ignorable="d"
         Title="Upcome_Movie_Management" Height="450" Width="800"
-        MaxWidth="800" MaxHeight="450"
+        MaxWidth="900" MaxHeight="500"
         ResizeMode="NoResize" 
         WindowStartupLocation="Manual"
         Left="200" Top="100">
