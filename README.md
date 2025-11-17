@@ -39,40 +39,6 @@ To use this system, follow these steps:
    ```
 4. 🖥️ Run the desktop application (built with WPF in Visual Studio).
 
-## API Endpoint 🌍
-
-The web application interacts with the backend through the following endpoint:
-
-```
-http://localhost:5000/signup
-```
-
-The request body includes:
-
-```json
-{
-  "full_name": "User Name",
-  "email": "user@example.com",
-  "password": "securepassword"
-}
-```
-
-### Response Format 📩
-
-- ✅ **Success (201 Created)**
-  ```json
-  {
-    "message": "Signup successful!",
-    "userId": "12345"
-  }
-  ```
-- ❌ **Error (400/500)**
-  ```json
-  {
-    "error": "Email already exists"
-  }
-  ```
-
 ## Dependencies 🛠️
 
 - ⚛️ `react`
@@ -81,13 +47,5 @@ The request body includes:
 - 🚀 `express` (for backend if applicable)
 - 📜 `react-scripts`
 
-## Customization 🎨
 
-- 🛠️ Modify the API endpoint URL if needed.
-- 🎭 Customize styles in `Signup.css`.
-- ✅ Enhance form validation for better user experience.
-
-## License 📜
-
-This project is licensed under the MIT License.
 
